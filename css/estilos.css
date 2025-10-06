@@ -1,0 +1,465 @@
+/* =========================== Paleta========================================  */
+:root {
+    --bg: #F8F3F0;
+    /* fondo base claro */
+    --text: #1E1E1E;
+    /* color de texto principal */
+    --accent: #A3B18A;
+    /* color acento (bordes/links) */
+    --gold: #D4AF37;
+    /* color de botón, CAMBIAR */
+    --white: #FFFFFF;
+    /* blanco  */
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    /* quita margenes pord efecto  */
+    padding: 0
+        /* quita padding por defecto */
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* =========================== Accesibilidad============================ ===== */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    z-index: 9999;
+}
+
+/* ==================================== Header=============================== ===== */
+header {
+    background: var(--bg);
+    border-bottom: 2px solid var(--accent);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: .25s;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ================================================ Hero / banner================ ===== */
+.banner.banner--solid {
+    background: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 86px 20px 74px;
+}
+
+.banner__content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.banner h2 {
+    margin: 0 0 8px 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.banner p {
+    margin: 0 0 16px 0;
+    opacity: .95;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--gold);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform .15s, filter .15s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.btn--small {
+    padding: 10px 18px;
+}
+
+/* ===================================== Layout generales============================ ===== */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ===================== 3 cajas que sale en inicio (beneficios/atajos) ===== */
+.features {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 20px 6px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: var(--white);
+    padding: 22px 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    transition: transform .2s, box-shadow .2s;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, .12);
+}
+
+.box h3 {
+    margin: 0 0 8px 0;
+}
+
+/* ========================================== Servicios destacados========================  ===== */
+.services-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .10);
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .14);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card .card-body {
+    padding: 14px 16px;
+}
+
+.card h4 {
+    margin: 0 0 6px;
+    color: var(--accent);
+}
+
+.card p {
+    margin: 0 0 10px;
+}
+
+.card .card-actions {
+    margin-top: auto;
+    padding: 0 16px 16px;
+}
+
+/* ===================================galería en============================= iniico ===== */
+.gallery3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.gallery3 img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
+}
+
+/* ======================================= Testimonios================== ===== */
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.testimonial {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .08);
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    opacity: .8;
+}
+
+/* ===== FAQ mini (accesible) ===== */
+.faq {
+    display: grid;
+    gap: 10px;
+}
+
+.faq details {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ===== Banda CTA final ===== */
+.cta-band {
+    background: #1E1E1E;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 14px;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+}
+
+.cta-band p {
+    margin: 0;
+    opacity: .9;
+}
+
+/* ===== About bullets ===== */
+.about {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1.2fr .8fr;
+}
+
+.about__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.about__bullets li {
+    background: var(--white);
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+/* ================================================= Footer ===== ===============================*/
+footer {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-preview {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 46px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .logo h1 {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .services-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Navegación con anclas (scroll suave) ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Offset para el header sticky al llegar a una sección */
+.anchored {
+    scroll-margin-top: 90px;
+}
+
+/* ===== Separadores de sección ===== */
+.section-pad {
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+/* modificaacion título */
+.divider {
+    border: 0;
+    height: 1px;
+    margin: 36px auto;
+    max-width: 1100px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, .12), transparent);
+}
