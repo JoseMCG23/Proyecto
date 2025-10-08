@@ -1,106 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lil Spirit Nail’s - Nosotros</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lil Spirit Nail’s - Nosotros</title>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Estilos de esta página -->
+  <link rel="stylesheet" href="css/nosotros.css">
 </head>
 
-<body>
-    <header>
-        <div class="logo"> <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
-            <h1>Lil Spirit Nail’s</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./index.html#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header> <!-- Organización, historia, filosofía -->
-    <section class="container">
-        <h2>Nuestra historia y filosofía</h2>
-        <p>Somos un emprendimiento de Alajuela dedicado al cuidado de uñas y al nail art personalizado. Creemos en el
-            detalle, la higiene y la creatividad como ejes para un servicio de calidad.</p>
-    </section> <!-- Misión, Visión, Valores -->
-    <section class="grid-3 container">
-        <article>
-            <h3>Misión</h3>
-            <p>Brindar manicure profesional y diseños personalizados que realcen la identidad de cada cliente.</p>
-        </article>
-        <article>
-            <h3>Visión</h3>
-            <p>Ser un referente local por nuestro trato humano, innovación en diseños y resultados duraderos.</p>
-        </article>
-        <article>
-            <h3>Valores</h3>
-            <ul>
-                <li>Higiene</li>
-                <li>Puntualidad</li>
-                <li>Creatividad</li>
-                <li>Respeto</li>
-            </ul>
-        </article>
-    </section> <!-- Productos/Servicios  -->
-    <section class="container">
-        <h2>Servicios principales</h2>
-        <ul class="cards">
-            <li class="card">
-                <h4>Manicure clásico</h4>
-                <p>Higiene y acabado profesional.</p>
-            </li>
-            <li class="card">
-                <h4>Uñas acrílicas</h4>
-                <p>Resistentes y personalizables.</p>
-            </li>
-            <li class="card">
-                <h4>Gel polish</h4>
-                <p>Color intenso y duradero.</p>
-            </li>
-            <li class="card">
-                <h4>Diseño artístico</h4>
-                <p>Estilos únicos según tu idea.</p>
-            </li>
-            <li class="card">
-                <h4>Retiro y retoque</h4>
-                <p>Cuidado correcto para tus uñas.</p>
-            </li>
-        </ul>
-    </section> <!-- Galería de imágenes  -->
-    <section class="container">
-        <h2>Trabajos realizados</h2>
-        <div class="gallery"> <img src="img/trabajo1.jpg" alt="Diseño de uñas 1"> <img src="img/trabajo2.jpg"
-                alt="Diseño de uñas 2"> <img src="img/trabajo3.jpg" alt="Diseño de uñas 3"> <img src="img/trabajo4.jpg"
-                alt="Diseño de uñas 4"> <img src="img/trabajo5.jpg" alt="Diseño de uñas 5"> </div>
-    </section> <!-- Multimedia HTML5  -->
-    <section class="container">
-        <h2>Conoce nuestro salón</h2> <video controls width="100%" preload="metadata">
-            <source src="media/salon.mp4" type="video/mp4"> Tu navegador no soporta video HTML5.
-        </video>
-    </section> <!-- Testimonios -->
-    <section class="container">
-        <h2>Testimonios</h2>
-        <div class="testimonials">
-            <blockquote>
-                <p>“Me encantó el diseño y la atención. ¡Volveré!”</p> <cite>— Andrea, Alajuela</cite>
-            </blockquote>
-            <blockquote>
-                <p>“Puntuales, limpias y súper creativas. 10/10.”</p> <cite>— Karla, Alajuela</cite>
-            </blockquote>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-        <p>Síguenos en <a href="#" target="_blank" rel="noopener">Instagram</a> | <a href="#" target="_blank"
-                rel="noopener">Facebook</a> | <a href="#" target="_blank" rel="noopener">WhatsApp</a> </p>
-    </footer>
-</body>
+<body class="page-nosotros">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <header>
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
+      <h1>Lil Spirit Nail’s</h1>
+    </div>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO  -->
+    <section class="banner banner--solid">
+      <div class="banner__content">
+        <h2>Bienvenida a Lil Spirit Nail’s</h2>
+        <p>Manicure profesional y nail art personalizado en Alajuela.</p>
+      </div>
+    </section>
+
+    <!-- INTRODUCCION -->
+    <section class="container">
+      <h3 class="section-title">Quiénes somos</h3>
+      <p>En <strong>Lil Spirit Nail’s</strong> realzamos tu belleza con diseños modernos,
+        materiales de calidad y una atención cercana. Cuidamos la salud de tu uña natural y
+        adaptamos cada servicio a tu estilo.</p>
+    </section>
+
+    <!-- INFO DE XIME -->
+    <section class="container">
+      <article class="nos__card">
+        <img class="nos__avatar" src="img/E9CA6073-A788-4F0E-897B-1E7600A6F543.JPG" alt="Xime Martínez, especialista en uñas">
+        <div>
+          <h3 class="nos__card-title">Xime Martínez</h3>
+          <p class="nos__muted">Creadora y especialista · 23 años</p>
+          <p>Amante del detalle, puntual y enfocada en la salud de la uña natural.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- MISIÓN / VISIÓN / VALORES -->
+    <section class="container nos__grid3">
+      <article class="nos__box">
+        <h4>Misión</h4>
+        <p>Brindar manicure profesional y diseños personalizados que te hagan sentir increíble.</p>
+      </article>
+      <article class="nos__box">
+        <h4>Visión</h4>
+        <p>Ser referente local por innovación, cercanía y resultados duraderos.</p>
+      </article>
+      <article class="nos__box">
+        <h4>Valores</h4>
+        <ul class="nos__ul">
+          <li>Higiene y cuidado</li>
+          <li>Puntualidad</li>
+          <li>Creatividad</li>
+          <li>Respeto</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CARRUSEL conjs -->
+    <section class="container">
+      <h3 class="section-title">Trabajos realizados</h3>
+      <div class="nos__carousel" id="carrusel" tabindex="0" aria-label="Galería de trabajos">
+        <div class="nos__track">
+          <img src="img/IMG_0027.JPG" alt="Trabajo 1" loading="lazy">
+          <img src="img/IMG_0398.JPG" alt="Trabajo 2" loading="lazy">
+          <img src="img/IMG_5627.JPG" alt="Trabajo 3" loading="lazy">
+          <img src="img/IMG_5853.JPG" alt="Trabajo 4" loading="lazy">
+          <img src="img/IMG_4745.JPG" alt="Trabajo 5" loading="lazy">
+        </div>
+        <button class="nos__nav nos__prev" aria-label="Anterior">‹</button>
+        <button class="nos__nav nos__next" aria-label="Siguiente">›</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="container nos__grid2">
+      <blockquote class="nos__quote">“Me encantó el diseño y la atención. ¡Volveré!” <cite>— Andrea</cite></blockquote>
+      <blockquote class="nos__quote">“Limpias, puntuales y creativas. 10/10.” <cite>— Karla</cite></blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
+    <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></p>
+  </footer>
+
+  <script src="js/carrusel.js" defer></script>
+</body>
 </html>

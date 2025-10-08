@@ -12,152 +12,180 @@
     <link rel="stylesheet" href="css/estilos.css" />
 </head>
 
-<body> <a href="#contenido" class="skip-link">Saltar al contenido</a> <!-- Header -->
+<body>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
     <header>
-        <div class="logo"> <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
             <h1>Lil Spirit Nail’s</h1>
         </div>
         <nav aria-label="Principal">
             <ul>
                 <li><a href="index.html#inicio" aria-current="page">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./blog.html">Blog</a></li> <!-- por ahora apunta a la galería, me avisas y lo cambio para que apute al suyo jose-->
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header> <!-- Hero -->
-    <section id="inicio" class="banner banner--solid anchored">
-        <div class="banner__content">
-            <h2>Realza tu estilo con uñas únicas </h2>
-            <p>Manicure profesional y nail art personalizado en Alajuela.</p> <a class="btn" href="#contacto"
-                aria-label="Agendar cita">Agendar cita</a>
-        </div>
-    </section>
-    <section class="container" id="info-empresa"> <!-- Descripción cortaaaaaaaaaaaaa -->
-        <section class="container about-intro">
-            <h3> Sobre Lil Spirit Nail’s</h3>
-            <p>En <strong>Lil Spirit Nail’s</strong> transformamos tus uñas en una obra de arte. Diseños modernos,
-                materiales de calidad y una experiencia relajante en <strong>Alajuela, Costa Rica</strong>.</p>
-        </section> <!-- Accesos rápidos -->
-        <section class="features anchored" id="atajos" aria-label="Accesos rápidos">
-            <article class="box">
-                <h3><a href="#contacto" style="text-decoration:none;color:inherit">Agendar cita</a></h3>
-                <p>Reserva tu espacio en minutos.</p>
-            </article>
-            <article class="box">
-                <h3><a href="#trabajos" style="text-decoration:none;color:inherit">Diseños destacados</a></h3>
-                <p>Mira los estilos que más piden.</p>
-            </article>
-            <article class="box">
-                <h3><a href="#servicios" style="text-decoration:none;color:inherit">Precios</a></h3>
-                <p>Tarifas claras y paquetes accesibles.</p>
-            </article>
-        </section>
-        <hr class="divider" /> <!-- Servicios destacados -->
-        <section class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
-            <h3 id="tit-serv-home" class="section-title section-pad">Servicios destacados</h3>
-            <div class="services-preview">
-                <article class="card"> <img src="img/clasicass.jpg" alt="Manicure clásico" class="" loading="lazy"
-                        decoding="async" width="1200" height="900">
-                    <div class="card-body">
-                        <h4>Manicure clásico</h4>
-                        <p>Higiene, corte y esmaltado impecable.</p>
-                    </div>
-                    <div class="card-actions"> <a href="servicios.html" class="btn btn--small"
-                            aria-label="Ver más sobre Manicure clásico">Ver más</a> </div>
-                </article>
-                <article class="card"> <img src="img/gel.jpg" alt="Esmaltado en gel" class="" loading="lazy"
-                        decoding="async" width="1200" height="900">
-                    <div class="card-body">
-                        <h4>Gel polish</h4>
-                        <p>Brillo intenso y duración hasta 3 semanas.</p>
-                    </div>
-                    <div class="card-actions"> <a href="servicios.html" class="btn btn--small"
-                            aria-label="Ver más sobre Gel polish">Ver más</a> </div>
-                </article>
-                <article class="card"> <img src="img/arte.jpg" alt="Diseño artístico de uñas" class="" loading="lazy"
-                        decoding="async" width="1200" height="900">
-                    <div class="card-body">
-                        <h4>Diseño artístico</h4>
-                        <p>Decoraciones personalizadas para tu estilo.</p>
-                    </div>
-                    <div class="card-actions"> <a href="servicios.html" class="btn btn--small"
-                            aria-label="Ver más sobre Diseño artístico">Ver más</a> </div>
-                </article>
-            </div>
-        </section>
-        <hr class="divider" /> <!-- Galería -->
-        <section class="container anchored" id="trabajos" aria-labelledby="tit-gal">
-            <h3 id="tit-gal" class="section-title section-pad">Trabajos recientes</h3>
-            <div class="gallery3"> <img src="img/Fondo2.jpg" alt="Nail art con dorado y nude" loading="lazy"
-                    decoding="async" width="640" height="480"> <img src="img/trabajo2.jpg"
-                    alt="Nail art con glitter verde" loading="lazy" decoding="async" width="640" height="480"> <img
-                    src="img/trabajo3.jpg" alt="Nail art francés moderno" loading="lazy" decoding="async" width="640"
-                    height="480"> </div>
-            <p style="margin-top:10px;"> <a href="https://www.instagram.com/lilspiritnails/" target="_blank"
-                    rel="noopener" class="btn btn--small">Ver más en Instagram</a> </p>
-        </section>
-        <hr class="divider" /> <!-- Quiénes somos breve -->
-        <section class="about anchored" id="nosotros" aria-label="Quiénes somos">
-            <div class="about__text">
-                <h3 class="section-pad">¿Quiénes somos?</h3>
-                <p><strong>Lil Spirit Nail’s</strong> ofrece manicure profesional y <em>nail art</em> personalizado.
-                    Diseños modernos, higiene impecable y atención cercana para que salgas con uñas duraderas.</p>
+    </header>
 
-                <h3 class="section-pad">¿Donde nos ubicamos?</h3>
-                    <p><strong>Lil Spirit Nail’s</strong> se ubica en el centro de alajuela, frente al parque Juan
-                    Santamaria, al lado del local Pizzero</p>
-            </div>
-            <ul class="about__bullets">
-                <li> Diseños a tu medida</li>
-                <li> Puntualidad</li>
-                <li> Materiales de calidad</li>
-            </ul>
-        </section>
-        <hr class="divider" /> <!-- Testimonios cortos -->
-        <section class="container anchored" id="testimonios" aria-labelledby="tit-test">
-            <h3 id="tit-test" class="section-title section-pad">Lo que dicen nuestras clientas</h3>
-            <div class="testimonials">
-                <blockquote class="testimonial">
-                    <p>“Me encantó el diseño y la atención. ¡Volveré!”</p> <cite>— Andrea, Alajuela</cite>
-                </blockquote>
-                <blockquote class="testimonial">
-                    <p>“Puntuales, limpias y súper creativas. 10/10.”</p> <cite>— Karla, Alajuela</cite>
-                </blockquote>
+    <main id="contenido">
+        <!-- Hero -->
+        <section id="inicio" class="banner banner--solid anchored">
+            <div class="banner__content">
+                <h2>Realza tu estilo con uñas únicas</h2>
+                <p>Manicure profesional y nail art personalizado en Alajuela.</p>
+                <a class="btn" href="#contacto" aria-label="Agendar cita">Agendar cita</a>
             </div>
         </section>
-        <hr class="divider" /> <!-- FAQ mini -->
-        <section class="container anchored" id="faq" aria-labelledby="tit-faq-mini">
-            <h3 id="tit-faq-mini" class="section-title section-pad">Preguntas frecuentes</h3>
-            <div class="faq">
-                <details>
-                    <summary>¿Cuánto dura un servicio de manicure?</summary>
-                    <p>Entre 45 y 60 minutos, según el tipo de servicio y diseño.</p>
-                </details>
-                <details>
-                    <summary>¿Cómo reservo una cita?</summary>
-                    <p>Desde la página de <a href="#contacto">Contacto</a> o escribiéndonos por WhatsApp.</p>
-                </details>
-                <details>
-                    <summary>¿Trabajan con diseños personalizados?</summary>
-                    <p>Sí, puedes traer tu referencia y te asesoramos para adaptarla a tu estilo.</p>
-                </details>
-            </div>
+
+        <section class="container" id="info-empresa">
+            <!-- Descripción  -->
+            <section class="container about-intro">
+                <h3>Sobre Lil Spirit Nail’s</h3>
+                <p>En <strong>Lil Spirit Nail’s</strong> transformamos tus uñas en una obra de arte. Diseños modernos,
+                    materiales de calidad y una experiencia relajante en <strong>Alajuela, Costa Rica</strong>.</p>
+            </section>
+
+            <!-- Accesos rápidos -->
+            <section class="features anchored" id="atajos" aria-label="Accesos rápidos">
+                <article class="box">
+                    <h3><a href="#contacto" style="text-decoration:none;color:inherit">Agendar cita</a></h3>
+                    <p>Reserva tu espacio en minutos.</p>
+                </article>
+                <article class="box">
+                    <h3><a href="#trabajos" style="text-decoration:none;color:inherit">Diseños destacados</a></h3>
+                    <p>Mira los estilos que más piden.</p>
+                </article>
+                <article class="box">
+                    <h3><a href="#servicios" style="text-decoration:none;color:inherit">Precios</a></h3>
+                    <p>Tarifas claras y paquetes accesibles.</p>
+                </article>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- Servicios destacados -->
+            <section class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
+                <h3 id="tit-serv-home" class="section-title section-pad">Servicios destacados</h3>
+                <div class="services-preview">
+                    <article class="card">
+                        <img src="img/clasicass.jpg" alt="Manicure clásico" loading="lazy" decoding="async" width="1200"
+                            height="900">
+                        <div class="card-body">
+                            <h4>Manicure clásico</h4>
+                            <p>Higiene, corte y esmaltado impecable.</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="servicios.html" class="btn btn--small"
+                                aria-label="Ver más sobre Manicure clásico">Ver más</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/gel.jpg" alt="Esmaltado en gel" loading="lazy" decoding="async" width="1200"
+                            height="900">
+                        <div class="card-body">
+                            <h4>Gel polish</h4>
+                            <p>Brillo intenso y duración hasta 3 semanas.</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="servicios.html" class="btn btn--small" aria-label="Ver más sobre Gel polish">Ver
+                                más</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/arte.jpg" alt="Diseño artístico de uñas" loading="lazy" decoding="async"
+                            width="1200" height="900">
+                        <div class="card-body">
+                            <h4>Diseño artístico</h4>
+                            <p>Decoraciones personalizadas para tu estilo.</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="servicios.html" class="btn btn--small"
+                                aria-label="Ver más sobre Diseño artístico">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- Galería -->
+            <section class="container anchored" id="trabajos" aria-labelledby="tit-gal">
+                <h3 id="tit-gal" class="section-title section-pad">Trabajos recientes</h3>
+                <div class="gallery3">
+                    <img src="img/Fondo2.jpg" alt="Nail art con dorado y nude" loading="lazy" decoding="async"
+                        width="640" height="480">
+                    <img src="img/trabajo2.jpg" alt="Nail art con glitter verde" loading="lazy" decoding="async"
+                        width="640" height="480">
+                    <img src="img/trabajo3.jpg" alt="Nail art francés moderno" loading="lazy" decoding="async"
+                        width="640" height="480">
+                </div>
+                <p style="margin-top:10px;">
+                    <a href="https://www.instagram.com/lilspiritnails/" target="_blank" rel="noopener"
+                        class="btn btn--small">Ver más en Instagram</a>
+                </p>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- Quiénes somos  -->
+            <section class="about anchored" id="nosotros" aria-label="Quiénes somos">
+                <div class="about__text">
+                    <h3 class="section-pad">¿Quiénes somos?</h3>
+                    <p><strong>Lil Spirit Nail’s</strong> ofrece manicure profesional y <em>nail art</em> personalizado.
+                        Diseños modernos, higiene impecable y atención cercana para que salgas con uñas duraderas.</p>
+
+                    <h3 class="section-pad">¿Dónde nos ubicamos?</h3>
+                    <p><strong>Lil Spirit Nail’s</strong> se ubica en el centro de Alajuela, frente al parque Juan
+                        Santamaría, al lado del local pizzero.</p>
+                </div>
+                <ul class="about__bullets">
+                    <li>Diseños a tu medida</li>
+                    <li>Puntualidad</li>
+                    <li>Materiales de calidad</li>
+                </ul>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- Testimonios cortos -->
+            <section class="container anchored" id="testimonios" aria-labelledby="tit-test">
+                <h3 id="tit-test" class="section-title section-pad">Lo que dicen nuestras clientas</h3>
+                <div class="testimonials">
+                    <blockquote class="testimonial">
+                        <p>“Me encantó el diseño y la atención. ¡Volveré!”</p>
+                        <cite>— Andrea, Alajuela</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>“Puntuales, limpias y súper creativas. 10/10.”</p>
+                        <cite>— Karla, Alajuela</cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- Banda CTA / Contacto -->
+            <section class="container anchored" id="contacto" aria-label="Agendar">
+                <div class="cta-band">
+                    <h3>¿Lista para unas uñas espectaculares?</h3>
+                    <p>Agenda ahora y te reservamos el mejor horario.</p>
+                    <a class="btn" href="https://wa.me/506TU_NUMERO" target="_blank" rel="noopener">Agendar por
+                        WhatsApp</a>
+                </div>
+            </section>
         </section>
-        <hr class="divider" /> <!-- Banda CTA / Contacto -->
-        <section class="container anchored" id="contacto" aria-label="Agendar">
-            <div class="cta-band">
-                <h3>¿Lista para unas uñas espectaculares?</h3>
-                <p>Agenda ahora y te reservamos el mejor horario.</p> <a class="btn" href="https://wa.me/506TU_NUMERO"
-                    target="_blank" rel="noopener">Agendar por WhatsApp</a>
-            </div>
-        </section>
-        </main> <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-            <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a> </p>
-        </footer>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
+        <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></p>
+    </footer>
 </body>
 
 </html>
