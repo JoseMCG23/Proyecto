@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lil Spirit Nail’s - Inicio</title>
     <meta name="description"
-        content="Manicure profesional y nail art personalizado en Alajuela. Diseños modernos, higiene impecable y atención cercana. Agenda tu cita con Lil Spirit Nail’s.">
+        content="Manicure profesional y nail art personalizado en Alajuela. Diseños modernos, higiene impecable y atención cercana. Agenda tu cita con Lil Spirit Nail’s." />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/home.css" />
 </head>
 
 <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    
 
     <header>
         <div class="logo">
@@ -22,163 +25,289 @@
         </div>
         <nav aria-label="Principal">
             <ul>
-                <li><a href="index.html#inicio" aria-current="page">Inicio</a></li>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="contenido">
-        <!-- Hero -->
-        <section id="inicio" class="banner banner--solid anchored">
-            <div class="banner__content">
-                <h2>Realza tu estilo con uñas únicas</h2>
-                <p>Manicure profesional y nail art personalizado en Alajuela.</p>
-                <a class="btn" href="#contacto" aria-label="Agendar cita">Agendar cita</a>
+        <!-- HERO -->
+        <section class="band band--cream">
+            <div class="hero-beauty reveal">
+                <div class="hero-text">
+                    <h2>Realza tu <span>belleza natural</span> con estilo</h2>
+                    <p>Tu momento de calma, color y detalle en un espacio pensado solo para vos.
+                        Uñas saludables, diseños modernos y atención personalizada en Alajuela.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn-main">Agendar cita</a>
+                        <a href="https://wa.me/50687975584" class="btn-outline" target="_blank"
+                            rel="noopener">WhatsApp</a>
+                    </div>
+
+                    <!-- Badges con iconos -->
+                    <div class="hero-badges">
+                        <span class="badge-pill"><svg class="ico">
+                                <use href="#ic-soap" />
+                            </svg>Higiene garantizada</span>
+                        <span class="badge-pill"><svg class="ico">
+                                <use href="#ic-paw" />
+                            </svg>Pet Friendly</span>
+                        <span class="badge-pill"><svg class="ico">
+                                <use href="#ic-cup" />
+                            </svg>Snacks incluidos</span>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="circle-bg"></div>
+                    <img src="img/fav1.JPG" alt="Diseño de uñas con arte moderno" loading="eager">
+                </div>
+            </div>
+
+            <p class="claim"> Lil Spirit Nail’s — donde cada detalle brilla contigo </p>
+            <div class="divider-icons" aria-hidden="true"></div>
+
+            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,32 C240,96 480,-32 720,32 C960,96 1200,0 1440,32 L1440,80 L0,80 Z" fill="currentColor">
+                </path>
+            </svg>
+        </section>
+
+        <!-- 3 PASOS -->
+        <section class="band band--olive">
+            <div class="container pasos reveal">
+                <h3>Tu cita perfecta en 3 pasos</h3>
+                <div class="pasos-grid">
+                    <article class="tilt">
+                        <div class="step-icon"><svg class="ico">
+                                <use href="#ic-nail" />
+                            </svg></div>
+                        <h4>Elige tu servicio</h4>
+                        <p>Manicure clásico, gel o diseño artístico.</p>
+                    </article>
+                    <article class="tilt">
+                        <div class="step-icon"><svg class="ico">
+                                <use href="#ic-calendar" />
+                            </svg></div>
+                        <h4>Agenda tu hora</h4>
+                        <p>Fácil, rápido y por WhatsApp.</p>
+                    </article>
+                    <article class="tilt">
+                        <div class="step-icon"><svg class="ico">
+                                <use href="#ic-sparkles" />
+                            </svg></div>
+                        <h4>Disfruta tu experiencia</h4>
+                        <p>Relájate, nosotras nos encargamos del brillo.</p>
+                    </article>
+                </div>
+            </div>
+            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,48 C360,0 720,128 1080,48 C1260,12 1350,20 1440,32 L1440,80 L0,80 Z" fill="currentColor">
+                </path>
+            </svg>
+        </section>
+
+        <!-- SOBRE + CTA COMPACTOS -->
+        <section class="band band--cream">
+            <div class="about-compact container reveal">
+                <div class="about-compact__text">
+                    <h3>¿Qué nos hace diferentes?</h3>
+                    <p>Cuidado real de la uña natural, diseño a tu medida y una experiencia relajante en Alajuela.</p>
+
+                    <ul class="about-compact__bullets" aria-label="Diferenciales">
+                        <li><svg class="ico" style="width:16px;height:16px">
+                                <use href="#ic-soap" />
+                            </svg> Higiene 10/10 con bioseguridad</li>
+                        <li><svg class="ico" style="width:16px;height:16px">
+                                <use href="#ic-palette" />
+                            </svg> Diseño asesorado según tu estilo</li>
+                        <li><svg class="ico" style="width:16px;height:16px">
+                                <use href="#ic-clock" />
+                            </svg> Puntualidad y citas claras</li>
+                        <li><svg class="ico" style="width:16px;height:16px">
+                                <use href="#ic-sparkles" />
+                            </svg> Acabados duraderos</li>
+                    </ul>
+
+                    <div class="about-compact__actions">
+                        <a href="https://wa.me/50687975584" target="_blank" rel="noopener" class="btn-main">Agendar por
+                            WhatsApp</a>
+                        <a href="#servicios" class="btn-outline">Ver servicios</a>
+                    </div>
+                </div>
+
+                <ul class="about-compact__kpis">
+                    <li><strong>+4</strong><span>Años de experiencia</span></li>
+                    <li><strong>+500</strong><span>Clientes felices</span></li>
+                    <li><strong>100%</strong><span>Pet Friendly</span></li>
+                </ul>
             </div>
         </section>
 
-        <section class="container" id="info-empresa">
-            <!-- Descripción  -->
-            <section class="container about-intro">
-                <h3>Sobre Lil Spirit Nail’s</h3>
-                <p>En <strong>Lil Spirit Nail’s</strong> transformamos tus uñas en una obra de arte. Diseños modernos,
-                    materiales de calidad y una experiencia relajante en <strong>Alajuela, Costa Rica</strong>.</p>
-            </section>
+        <!-- Servicios destacados -->
+        <section class="band band--olive">
+            <div class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
+                <h3 id="tit-serv-home" class="section-title section-pad reveal">Servicios destacados</h3>
 
-            <!-- Accesos rápidos -->
-            <section class="features anchored" id="atajos" aria-label="Accesos rápidos">
-                <article class="box">
-                    <h3><a href="#contacto" style="text-decoration:none;color:inherit">Agendar cita</a></h3>
-                    <p>Reserva tu espacio en minutos.</p>
-                </article>
-                <article class="box">
-                    <h3><a href="#trabajos" style="text-decoration:none;color:inherit">Diseños destacados</a></h3>
-                    <p>Mira los estilos que más piden.</p>
-                </article>
-                <article class="box">
-                    <h3><a href="#servicios" style="text-decoration:none;color:inherit">Precios</a></h3>
-                    <p>Tarifas claras y paquetes accesibles.</p>
-                </article>
-            </section>
-
-            <hr class="divider" />
-
-            <!-- Servicios destacados -->
-            <section class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
-                <h3 id="tit-serv-home" class="section-title section-pad">Servicios destacados</h3>
                 <div class="services-preview">
-                    <article class="card">
+                    <!-- 1 -->
+                    <article class="card tilt reveal">
                         <img src="img/clasicass.jpg" alt="Manicure clásico" loading="lazy" decoding="async" width="1200"
                             height="900">
                         <div class="card-body">
                             <h4>Manicure clásico</h4>
                             <p>Higiene, corte y esmaltado impecable.</p>
+                            <ul class="chips">
+                                <li><svg class="ico">
+                                        <use href="#ic-clock" />
+                                    </svg>45–60 min</li>
+                                
+                            </ul>
                         </div>
-                        <div class="card-actions">
-                            <a href="servicios.html" class="btn btn--small"
-                                aria-label="Ver más sobre Manicure clásico">Ver más</a>
-                        </div>
+                        <div class="card-actions"><a href="servicios.html" class="btn btn--small">Ver más</a></div>
                     </article>
 
-                    <article class="card">
+                    <!-- 2: SOLO tiempo -->
+                    <article class="card tilt reveal">
                         <img src="img/gel.jpg" alt="Esmaltado en gel" loading="lazy" decoding="async" width="1200"
                             height="900">
                         <div class="card-body">
                             <h4>Gel polish</h4>
                             <p>Brillo intenso y duración hasta 3 semanas.</p>
+                            <ul class="chips">
+                                <li><svg class="ico">
+                                        <use href="#ic-clock" />
+                                    </svg>60–75 min</li>
+                            </ul>
                         </div>
-                        <div class="card-actions">
-                            <a href="servicios.html" class="btn btn--small" aria-label="Ver más sobre Gel polish">Ver
-                                más</a>
-                        </div>
+                        <div class="card-actions"><a href="servicios.html" class="btn btn--small">Ver más</a></div>
                     </article>
 
-                    <article class="card">
+                    <!-- 3 -->
+                    <article class="card tilt reveal">
                         <img src="img/arte.jpg" alt="Diseño artístico de uñas" loading="lazy" decoding="async"
                             width="1200" height="900">
                         <div class="card-body">
                             <h4>Diseño artístico</h4>
                             <p>Decoraciones personalizadas para tu estilo.</p>
+                            <ul class="chips">
+                                <li><svg class="ico">
+                                        <use href="#ic-clock" />
+                                    </svg>75–90 min</li>
+                                
+                            </ul>
                         </div>
-                        <div class="card-actions">
-                            <a href="servicios.html" class="btn btn--small"
-                                aria-label="Ver más sobre Diseño artístico">Ver más</a>
-                        </div>
+                        <div class="card-actions"><a href="servicios.html" class="btn btn--small">Ver más</a></div>
                     </article>
                 </div>
-            </section>
+            </div>
+            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,64 C320,16 640,112 960,48 C1150,12 1310,28 1440,48 L1440,80 L0,80 Z" fill="currentColor">
+                </path>
+            </svg>
+        </section>
 
-            <hr class="divider" />
+        <!-- Antes/Después -->
+        <section class="band band--nude">
+            <div class="before-after container reveal" aria-label="Antes y después">
+                <h3 class="section-title section-pad">Antes y después</h3>
+                <div class="ba">
+                    <img src="img/antes.jpg" alt="Antes" class="ba__img">
+                    <img src="img/IMG_0027.JPG" alt="Después" class="ba__img ba__img--top">
+                    <input type="range" min="0" max="100" value="50" class="ba__slider" aria-label="Comparar resultado">
+                </div>
+            </div>
+        </section>
 
-            <!-- Galería -->
-            <section class="container anchored" id="trabajos" aria-labelledby="tit-gal">
+        <!-- Trabajos recientes -->
+        <section class="band band--cream">
+            <div class="container anchored reveal" id="trabajos" aria-labelledby="tit-gal">
                 <h3 id="tit-gal" class="section-title section-pad">Trabajos recientes</h3>
                 <div class="gallery3">
-                    <img src="img/Fondo2.jpg" alt="Nail art con dorado y nude" loading="lazy" decoding="async"
+                    <img src="img/IMG_5751.JPG" alt="Nail art con dorado y nude" loading="lazy" decoding="async"
                         width="640" height="480">
-                    <img src="img/trabajo2.jpg" alt="Nail art con glitter verde" loading="lazy" decoding="async"
-                        width="640" height="480">
-                    <img src="img/trabajo3.jpg" alt="Nail art francés moderno" loading="lazy" decoding="async"
+                    <img src="img/fav3.JPG" alt="Nail art con glitter verde" loading="lazy" decoding="async" width="640"
+                        height="480">
+                    <img src="img/IMG_9559.JPG" alt="Nail art francés moderno" loading="lazy" decoding="async"
                         width="640" height="480">
                 </div>
                 <p style="margin-top:10px;">
                     <a href="https://www.instagram.com/lilspiritnails/" target="_blank" rel="noopener"
-                        class="btn btn--small">Ver más en Instagram</a>
+                        class="btn btn--small">Ver todo en Instagram</a>
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <hr class="divider" />
+        <!-- Beneficios -->
+        <section class="band band--olive">
+            <div class="container reveal">
+                <h3 class="section-title" style="text-align:center;margin-bottom:8px">Beneficios de atenderte con
+                    nosotras</h3>
+                <p style="text-align:center;opacity:.9;margin:0 0 18px">Lo importante en segundos: calidad, seguridad y
+                    una experiencia linda.</p>
 
-            <!-- Quiénes somos  -->
-            <section class="about anchored" id="nosotros" aria-label="Quiénes somos">
-                <div class="about__text">
-                    <h3 class="section-pad">¿Quiénes somos?</h3>
-                    <p><strong>Lil Spirit Nail’s</strong> ofrece manicure profesional y <em>nail art</em> personalizado.
-                        Diseños modernos, higiene impecable y atención cercana para que salgas con uñas duraderas.</p>
-
-                    <h3 class="section-pad">¿Dónde nos ubicamos?</h3>
-                    <p><strong>Lil Spirit Nail’s</strong> se ubica en el centro de Alajuela, frente al parque Juan
-                        Santamaría, al lado del local pizzero.</p>
+                <div class="why-grid">
+                    <article class="why-card tilt">
+                        <div class="ico-circle"><svg class="ico">
+                                <use href="#ic-bottle" />
+                            </svg></div>
+                        <h4>Higiene real</h4>
+                        <p>Protocolos y materiales de primera.</p>
+                    </article>
+                    <article class="why-card tilt">
+                        <div class="ico-circle"><svg class="ico">
+                                <use href="#ic-palette" />
+                            </svg></div>
+                        <h4>Asesoría honesta</h4>
+                        <p>Diseño que va con vos.</p>
+                    </article>
+                    <article class="why-card tilt">
+                        <div class="ico-circle"><svg class="ico">
+                                <use href="#ic-clock" />
+                            </svg></div>
+                        <h4>Puntualidad</h4>
+                        <p>Tu tiempo vale.</p>
+                    </article>
+                    <article class="why-card tilt">
+                        <div class="ico-circle"><svg class="ico">
+                                <use href="#ic-sparkles" />
+                            </svg></div>
+                        <h4>Durabilidad</h4>
+                        <p>Brillo que permanece.</p>
+                    </article>
                 </div>
-                <ul class="about__bullets">
-                    <li>Diseños a tu medida</li>
-                    <li>Puntualidad</li>
-                    <li>Materiales de calidad</li>
-                </ul>
-            </section>
+            </div>
+        </section>
 
-            <hr class="divider" />
-
-            <!-- Testimonios cortos -->
-            <section class="container anchored" id="testimonios" aria-labelledby="tit-test">
+        <!-- Testimonios + CTA -->
+        <section class="band band--nude" id="contacto">
+            <div class="container anchored reveal" aria-labelledby="tit-test">
                 <h3 id="tit-test" class="section-title section-pad">Lo que dicen nuestras clientas</h3>
                 <div class="testimonials">
                     <blockquote class="testimonial">
-                        <p>“Me encantó el diseño y la atención. ¡Volveré!”</p>
-                        <cite>— Andrea, Alajuela</cite>
+                        <p>“Me encantó el diseño y la atención. ¡Volveré!”</p><cite>— Fio Meléndez · ⭐️⭐️⭐️⭐️⭐️</cite>
                     </blockquote>
                     <blockquote class="testimonial">
-                        <p>“Puntuales, limpias y súper creativas. 10/10.”</p>
-                        <cite>— Karla, Alajuela</cite>
+                        <p>“Puntuales, limpias y súper creativas. 10/10.”</p><cite>— Elieth Jiménez · ⭐️⭐️⭐️⭐️⭐️</cite>
                     </blockquote>
                 </div>
-            </section>
+            </div>
 
-            <hr class="divider" />
-
-            <!-- Banda CTA / Contacto -->
-            <section class="container anchored" id="contacto" aria-label="Agendar">
+            <div class="container anchored reveal" aria-label="Agendar">
                 <div class="cta-band">
                     <h3>¿Lista para unas uñas espectaculares?</h3>
                     <p>Agenda ahora y te reservamos el mejor horario.</p>
-                    <a class="btn" href="https://wa.me/506TU_NUMERO" target="_blank" rel="noopener">Agendar por
+                    <a class="btn" href="https://wa.me/50687975584" target="_blank" rel="noopener">Agendar por
                         WhatsApp</a>
+                    <p class="cta-band__meta">Lunes–Sábado · 9:00–18:00 · Centro de Alajuela</p>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
 
@@ -186,6 +315,129 @@
         <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
         <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></p>
     </footer>
+
+    <!-- Sticky CTA móvil -->
+    <div class="sticky-cta" role="navigation" aria-label="Acciones rápidas">
+        <a href="#contacto">Reservar</a>
+        <a href="https://wa.me/50687975584" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <script>
+        // Slider antes/después
+        document.querySelectorAll('.ba').forEach(b => {
+            const top = b.querySelector('.ba__img--top'),
+                s = b.querySelector('.ba__slider');
+            s.addEventListener('input', () => top.style.clipPath = `inset(0 ${100 - s.value}% 0 0)`);
+        });
+
+        // Reveal on scroll
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal--visible'); io.unobserve(e.target); } })
+        }, { threshold: .15 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // Scroll progress bar
+        const bar = document.querySelector('.scrollbar__bar');
+        const onScroll = () => {
+            const h = document.documentElement;
+            const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+            bar.style.transform = `scaleX(${scrolled / 100})`;
+        };
+        onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    </script>
+
+    <!-- Sprite de iconos  -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <!-- básicos -->
+        <symbol id="ic-soap" viewBox="0 0 24 24">
+            <g class="ico">
+                <rect x="3" y="9" width="18" height="10" rx="4" />
+                <path d="M7 9V7a3 3 0 0 1 3-3h2" />
+                <circle cx="7" cy="5" r="1" />
+                <circle cx="16" cy="4" r="1" />
+            </g>
+        </symbol>
+        <symbol id="ic-paw" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M12 13c3 0 5 2 5 4.5S14.5 21 12 21s-5-.5-5-3.5S9 13 12 13Z" />
+                <circle cx="6.5" cy="9" r="1.8" />
+                <circle cx="10.5" cy="7" r="1.8" />
+                <circle cx="13.5" cy="7" r="1.8" />
+                <circle cx="17.5" cy="9" r="1.8" />
+            </g>
+        </symbol>
+        <symbol id="ic-cup" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M6 3h10v5a5 5 0 0 1-5 5h0A5 5 0 0 1 6 8V3Z" />
+                <path d="M21 7h-3v1a6 6 0 0 1-6 6h-1" />
+                <path d="M5 21h10" />
+            </g>
+        </symbol>
+
+        <!-- pasos -->
+        <symbol id="ic-nail" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M8 3h8l1 6v6a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V9l1-6Z" />
+                <path d="M9 9h6" />
+            </g>
+        </symbol>
+        <symbol id="ic-calendar" viewBox="0 0 24 24">
+            <g class="ico">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+            </g>
+        </symbol>
+        <symbol id="ic-sparkles" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z" />
+                <path d="M20 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z" />
+            </g>
+        </symbol>
+
+        <!-- bullets/beneficios/servicios -->
+        <symbol id="ic-bottle" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M10 2h4v3l2 2v11a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V7l2-2V2Z" />
+            </g>
+        </symbol>
+        <symbol id="ic-palette" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 1 0 0-4h-1a2 2 0 1 1 0-4 3 3 0 0 0 3-3 7 7 0 0 0-4-7Z" />
+                <circle cx="7.5" cy="10.5" r="1" />
+                <circle cx="9.5" cy="6.5" r="1" />
+                <circle cx="14.5" cy="6.5" r="1" />
+            </g>
+        </symbol>
+        <symbol id="ic-clock" viewBox="0 0 24 24">
+            <g class="ico">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v6l4 2" />
+            </g>
+        </symbol>
+        <symbol id="ic-pin" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z" />
+                <circle cx="12" cy="10" r="2.5" />
+            </g>
+        </symbol>
+        <symbol id="ic-wallet" viewBox="0 0 24 24">
+            <g class="ico">
+                <rect x="3" y="6" width="18" height="14" rx="3" />
+                <path d="M18 10h-5a2 2 0 0 0 0 4h5v-4Z" />
+            </g>
+        </symbol>
+        <symbol id="ic-crown" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M3 8l4 3 5-6 5 6 4-3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8Z" />
+            </g>
+        </symbol>
+        <symbol id="ic-camera" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M4 7h4l2-2h4l2 2h4v12H4V7Z" />
+                <circle cx="12" cy="13" r="3.5" />
+            </g>
+        </symbol>
+    </svg>
 </body>
 
 </html>

@@ -1,61 +1,50 @@
-// Carrusel funciona detectando el contenedor y avanza un slide por click
-(() => {
-    const viewport =
-        document.getElementById('carrusel') ||
-        document.querySelector('.nos__carousel') ||
-        document.querySelector('.carrusel');
-    if (!viewport) return;
+// Carrusel accesible + swipe + teclado 
+(function () {
+    const root = document.getElementById('carrusel');
+    if (!root) return;
 
-    const track =
-        viewport.querySelector('.pista') ||
-        viewport.querySelector('.nos__track') ||
-        viewport.firstElementChild;
-    const prev =
-        viewport.querySelector('.prev') ||
-        viewport.querySelector('.nos__prev');
-    const next =
-        viewport.querySelector('.next') ||
-        viewport.querySelector('.nos__next');
+    const track = document.getElementById('track');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const slides = [...track.querySelectorAll('img')];
 
-    if (!track || !prev || !next) return;
+    let index = 0;
 
-    // Ancho de una "slide" (de cada cuadro por decirlo assi)
-    const slideWidth = () => {
-        const firstSlide =
-            track.querySelector('img, .slide, *') || viewport;
-        const w = firstSlide.getBoundingClientRect().width || viewport.clientWidth;
-        // Fallback seguro
-        return Math.max(w, viewport.clientWidth);
+    const goTo = (i) => {
+        index = (i + slides.length) % slides.length;
+        track.scrollTo({ left: root.clientWidth * index, behavior: 'smooth' });
     };
 
-    // Mover a la siguiente
-    function go(dir = 1) {
-        const step = slideWidth();
-        const maxLeft = track.scrollWidth - viewport.clientWidth;
-        const dest = Math.min(
-            Math.max(0, viewport.scrollLeft + dir * step),
-            Math.max(0, maxLeft)
-        );
-        viewport.scrollTo({ left: dest, behavior: 'smooth' });
-    }
+    prev.addEventListener('click', () => goTo(index - 1));
+    next.addEventListener('click', () => goTo(index + 1));
 
-    next.addEventListener('click', () => go(1));
-    prev.addEventListener('click', () => go(-1));
-
-    // Swipe táctil
-    let startX = null;
-    viewport.addEventListener('touchstart', e => (startX = e.touches[0].clientX), { passive: true });
-    viewport.addEventListener('touchend', e => {
-        if (startX == null) return;
-        const dx = e.changedTouches[0].clientX - startX;
-        if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
-        startX = null;
+    root.tabIndex = 0;
+    root.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(index - 1);
+        if (e.key === 'ArrowRight') goTo(index + 1);
     });
 
-    // Teclado 
-    viewport.addEventListener('keydown', e => {
-        if (e.key === 'ArrowRight') go(1);
-        if (e.key === 'ArrowLeft') go(-1);
+    const ro = new ResizeObserver(() => goTo(index));
+    ro.observe(root);
+
+    let startX = 0, startTime = 0, pid = null;
+    const THRESHOLD = 40;
+    track.addEventListener('pointerdown', (e) => {
+        startX = e.clientX; startTime = Date.now(); pid = e.pointerId;
+        track.setPointerCapture(pid);
+    });
+    track.addEventListener('pointerup', (e) => {
+        if (pid !== e.pointerId) return;
+        const dx = e.clientX - startX;
+        const dt = Date.now() - startTime;
+        if (Math.abs(dx) > THRESHOLD || (Math.abs(dx) > 10 && dt < 180)) {
+            dx < 0 ? goTo(index + 1) : goTo(index - 1);
+        }
+        pid = null;
+    });
+
+    track.addEventListener('scroll', () => {
+        const i = Math.round(track.scrollLeft / root.clientWidth);
+        if (!Number.isNaN(i)) index = i;
     });
 })();
-

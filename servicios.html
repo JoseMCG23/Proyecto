@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lil Spirit Nail’s - Servicios</title> <!-- Fuente -->
+    <title>Lil Spirit Nail’s - Servicios</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Estilos -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/servicios.css">
 </head>
 
-<body> <!-- Header -->
+<body>
     <header>
-        <div class="logo"> <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
+        <div class="logo"><img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
             <h1>Lil Spirit Nail’s</h1>
         </div>
         <nav>
@@ -22,47 +22,196 @@
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="servicios.html" aria-current="page">Servicios</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="./index.html#contacto">Contacto</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
             </ul>
         </nav>
-    </header> <!-- Banner ROSADO -->
-    <section class="banner banner--solid">
-        <div class="banner__content">
-            <h2>Nuestros servicios </h2>
-            <p>Consulta opciones, precios y agenda tu cita.</p>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section class="srv-hero">
+        <div class="srv-hero__inner">
+            <div class="srv-hero__text">
+                <p class="eyebrow">Catálogo</p>
+                <h2>Nuestros <span>servicios</span></h2>
+                <p class="sub">Opciones, precios y agenda en un solo lugar.</p>
+
+                <div class="srv-actions">
+                    <a class="btn-cta" target="_blank" rel="noopener"
+                        href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20una%20cita">
+                        Agendar por WhatsApp
+                    </a>
+                    <a class="btn-ghost" href="#listado">Ver listado</a>
+                </div>
+
+                <!-- BADGES sin emojis (iconos) -->
+                <ul class="srv-badges">
+                    
+                </ul>
+            </div>
+
+            <div class="srv-hero__media" aria-hidden="true">
+                <div class="blob"></div>
+                <img class="ph ph1" src="img/clasicass.jpg" alt="">
+                <img class="ph ph2" src="img/gel.jpg" alt="">
+                <img class="ph ph3" src="img/arte.jpg" alt="">
+            </div>
         </div>
-    </section> <!-- Catálogo de servicios -->
-    <section class="services container">
+    </section>
+
+    <!-- ====== GUÍA DE LARGOS ====== -->
+    <section class="size-guide container" id="guia">
+        <div class="size-head">
+            <h3 class="size-title">Guía de <span>largos</span></h3>
+            <p class="size-sub">Elegí el largo que mejor se adapte a tu estilo y rutina. Te asesoramos en nuestro
+                estudio.</p>
+        </div>
+
+        <div class="size-grid">
+            <figure class="size-card"><img src="img/xs.jpg" alt="Largo XS">
+                <figcaption>XS</figcaption>
+            </figure>
+            <figure class="size-card"><img src="img/ss.jpg" alt="Largo S">
+                <figcaption>S</figcaption>
+            </figure>
+            <figure class="size-card"><img src="img/mm.jpg" alt="Largo M">
+                <figcaption>M</figcaption>
+            </figure>
+            <figure class="size-card"><img src="img/ll.jpg" alt="Largo L">
+                <figcaption>L</figcaption>
+            </figure>
+            <figure class="size-card"><img src="img/xl.jpg" alt="Largo XL">
+                <figcaption>XL</figcaption>
+            </figure>
+        </div>
+
+        <p class="size-note">Disponibles en Gel-X y Gel de Construcción (Luminary). Imágenes referenciales.</p>
+    </section>
+
+    <!-- ====== LISTADO DE SERVICIOS ====== -->
+    <section id="listado" class="services container">
+        <!-- 1 -->
         <article class="service-card">
-            <h3>Manicure clásico</h3>
-            <p>Cuidado de uñas con limpieza, corte y esmaltado sencillo.</p>
-            <p class="price">₡6.000</p> <a href="#" class="btn btn--small">Agendar</a>
+            <img src="img/construccion.jpg" alt="Gel de construcción / Luminary Multiflex" loading="lazy">
+            <h3>Gel de construcción · Luminary Multiflex</h3>
+            <p>Constructor flexible que fortalece y da soporte a la uña natural. Acabado resistente, natural y cómodo.
+            </p>
+            <ul class="chips">
+                <li><svg class="ico">
+                        <use href="#ic-wallet" />
+                    </svg>Set nuevo: XS ₡13 000 · S ₡14 000 · M ₡15 000 · L ₡16 000 · XL ₡17 000</li>
+                <li><svg class="ico">
+                        <use href="#ic-refresh" />
+                    </svg>Retoque: XS ₡11 000 · S ₡12 000 · M ₡13 000 · L ₡14 000 · XL ₡15 000</li>
+            </ul>
+            <a href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20Gel%20de%20construcci%C3%B3n"
+                class="btn btn--small" target="_blank" rel="noopener">Agendar</a>
         </article>
+
+        <!-- 2 -->
         <article class="service-card">
-            <h3>Uñas acrílicas</h3>
-            <p>Extensiones resistentes, personalizables en largo y forma.</p>
-            <p class="price">Desde ₡12.000</p> <a href="#" class="btn btn--small">Agendar</a>
+            <img src="img/gelxx.jpg" alt="Gel-X" loading="lazy">
+            <h3>Gel-X</h3>
+            <p>Sistema de extensión con gel suave. Uñas largas y naturales, rápido y versátil, cuidando la uña natural.
+            </p>
+            <ul class="chips">
+                <li><svg class="ico">
+                        <use href="#ic-wallet" />
+                    </svg>XS–L ₡14 000 · XL ₡15 000</li>
+            </ul>
+            <a href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20Gel-X"
+                class="btn btn--small" target="_blank" rel="noopener">Agendar</a>
         </article>
+
+        <!-- 3 -->
         <article class="service-card">
-            <h3>Gel polish</h3>
-            <p>Esmalte en gel con brillo intenso y duración de hasta 3 semanas.</p>
-            <p class="price">₡8.000</p> <a href="#" class="btn btn--small">Agendar</a>
+            <img src="img/semi.jpg" alt="Semipermanente" loading="lazy">
+            <h3>Semipermanente</h3>
+            <p>Esmalte especial de mayor duración curado en UV/LED para un acabado duradero y brillante.</p>
+            <ul class="chips">
+                <li><svg class="ico">
+                        <use href="#ic-wallet" />
+                    </svg>Manos ₡9 000 · Pies ₡5 000</li>
+            </ul>
+            <a href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20Semipermanente"
+                class="btn btn--small" target="_blank" rel="noopener">Agendar</a>
         </article>
+
+        <!-- 4 -->
         <article class="service-card">
-            <h3>Diseño artístico</h3>
-            <p>Decoraciones personalizadas: glitter, pedrería, stickers y más.</p>
-            <p class="price">Desde ₡10.000</p> <a href="#" class="btn btn--small">Agendar</a>
+            <img src="img/rusa.jpg" alt="Manicura rusa en hombres" loading="lazy">
+            <h3>Manicura rusa en hombres</h3>
+            <p>Limpieza y perfeccionamiento de cutícula para un acabado prolijo y natural.</p>
+            <ul class="chips">
+                <li><svg class="ico">
+                        <use href="#ic-wallet" />
+                    </svg>Sin top coat ₡5 000 · Con top coat (brillo) ₡6 000</li>
+            </ul>
+            <a href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20manicura%20rusa%20en%20hombres"
+                class="btn btn--small" target="_blank" rel="noopener">Agendar</a>
         </article>
+
+        <!-- 5 -->
         <article class="service-card">
-            <h3>Retiro y retoque</h3>
-            <p>Retiro seguro de acrílico o gel y retoque con nuevo diseño.</p>
-            <p class="price">₡5.000</p> <a href="#" class="btn btn--small">Agendar</a>
+            <img src="img/pedicure.jpg" alt="Pedicure spa" loading="lazy">
+            <h3>Pedicure spa</h3>
+            <p>Limpieza, exfoliación, hidratación y masaje para relajar y mejorar la salud de los pies. Pies suaves y
+                cuidados.</p>
+            <ul class="chips">
+                <li><svg class="ico">
+                        <use href="#ic-wallet" />
+                    </svg>₡14 000</li>
+            </ul>
+            <a href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20Pedicure%20spa"
+                class="btn btn--small" target="_blank" rel="noopener">Agendar</a>
         </article>
-    </section> <!-- Footer -->
+    </section>
+
     <footer>
         <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-        <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a> </p>
+        <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></p>
     </footer>
+
+    <!-- Sprite de iconos -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <!-- higiene / diseño / tiempo -->
+        <symbol id="ic-soap" viewBox="0 0 24 24">
+            <g class="ico">
+                <rect x="3" y="9" width="18" height="10" rx="4" />
+                <path d="M7 9V7a3 3 0 0 1 3-3h2" />
+                <circle cx="7" cy="5" r="1" />
+                <circle cx="16" cy="4" r="1" />
+            </g>
+        </symbol>
+        <symbol id="ic-palette" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 1 0 0-4h-1a2 2 0 1 1 0-4 3 3 0 0 0 3-3 7 7 0 0 0-4-7Z" />
+                <circle cx="7.5" cy="10.5" r="1" />
+                <circle cx="9.5" cy="6.5" r="1" />
+                <circle cx="14.5" cy="6.5" r="1" />
+            </g>
+        </symbol>
+        <symbol id="ic-clock" viewBox="0 0 24 24">
+            <g class="ico">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v6l4 2" />
+            </g>
+        </symbol>
+
+        <!-- listado chips -->
+        <symbol id="ic-wallet" viewBox="0 0 24 24">
+            <g class="ico">
+                <rect x="3" y="6" width="18" height="14" rx="3" />
+                <path d="M18 10h-5a2 2 0 0 0 0 4h5v-4Z" />
+            </g>
+        </symbol>
+        <symbol id="ic-refresh" viewBox="0 0 24 24">
+            <g class="ico">
+                <path d="M21 12a9 9 0 1 1-3-6.7" />
+                <path d="M21 3v6h-6" />
+            </g>
+        </symbol>
+    </svg>
 </body>
 
 </html>
