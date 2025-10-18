@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilosBlog.css">
-    <title>Lil Spirit Nail’s</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lil Spirit Nail’s – Blog</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Estilos de esta página -->
+    <link rel="stylesheet" href="css/estilosBlog.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="./img/logo.jpg" alt="Logo Lil Spirit Nail’s">
+            <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
             <h1>Lil Spirit Nail’s</h1>
         </div>
-
         <nav aria-label="Principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -20,6 +27,7 @@
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="blog.html" aria-current="page">Blog</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
             </ul>
         </nav>
     </header>
@@ -81,14 +89,26 @@
             <span>Principiantes</span>
             </p>
         </div>
+
+        <div class="cuadro">
+            <h3>Etiquetas populares</h3>
+            <p class="Etiquetas">
+            <span>Cuidado de uñas</span>
+            <span>Mantenimiento</span>
+            <span>Técnicas</span>
+            </p>
+        </div>
     </section>
     </main>
 
     
 
-    <footer>
-        <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-        <p>Síguenos en <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">WhatsApp</a></p>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>&copy; 2025 Lil Spirit Nail’s · Alajuela, Costa Rica</p>
+            <p>Síguenos: <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="https://wa.me/50687975584"
+            target="_blank" rel="noopener">WhatsApp</a></p>
+        </div>
     </footer>
     
 </body>
