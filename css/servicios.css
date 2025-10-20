@@ -1,4 +1,3 @@
-/* ===== Variables simples ===== */
 :root {
     --text: #1e1e1e;
     --muted: #666;
@@ -6,7 +5,6 @@
     --line: #e5e5e5;
     --accent: #a3b18a;
     --gold: #d6a85e;
-    --bg: #f8f6f3;
 }
 
 * {
@@ -22,19 +20,19 @@ body {
     margin: 0;
     font-family: Poppins, system-ui, sans-serif;
     color: var(--text);
-    background: #faf7f5
+    background: #faf7f5;
 }
 
 .ico {
     stroke: currentColor;
     fill: none;
     stroke-width: 1.6;
-    color: #506044
+    color: #506044;
 }
 
-/* ===== HERO (simple y compacto) ===== */
+/* ===== HERO ===== */
 .srv-hero {
-    padding: 20px
+    padding: 20px;
 }
 
 .srv-hero__inner {
@@ -46,7 +44,7 @@ body {
     align-items: center;
     background: #f4f7ef;
     border: 1px solid var(--line);
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 18px;
 }
 
@@ -60,28 +58,28 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: #6e7d5a;
-    background: #eef3e9
+    background: #eef3e9;
 }
 
 .srv-hero__text h2 {
     margin: 0 0 8px;
     font-size: 28px;
-    line-height: 1.15
+    line-height: 1.15;
 }
 
 .srv-hero__text h2 span {
-    color: var(--accent)
+    color: var(--accent);
 }
 
 .srv-hero__text .sub {
     margin: 0 0 12px;
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .srv-actions {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .btn-cta,
@@ -90,23 +88,23 @@ body {
     padding: 10px 14px;
     border-radius: 10px;
     font-weight: 700;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .btn-cta {
     background: var(--gold);
-    color: #fff
+    color: #fff;
 }
 
 .btn-ghost {
     border: 2px solid var(--accent);
-    color: var(--text)
+    color: var(--text);
 }
 
-/* Fotos del hero (polaroids simples) */
+/* ===== Fotos del hero ===== */
 .srv-hero__media {
     position: relative;
-    min-height: 240px
+    min-height: 240px;
 }
 
 .ph {
@@ -116,53 +114,52 @@ body {
     width: 48%;
     border-radius: 14px;
     border: 6px solid #fff;
-    /* sin sombras ni filtros */
 }
 
 .ph1 {
     right: 10%;
     top: 10%;
-    transform: rotate(-4deg)
+    transform: rotate(-4deg);
 }
 
 .ph2 {
     right: 30%;
     top: -2%;
     transform: rotate(8deg);
-    width: 40%
+    width: 40%;
 }
 
 .ph3 {
     right: 14%;
     top: 26%;
     transform: rotate(3deg);
-    width: 42%
+    width: 42%;
 }
 
-/* ===== GUÍA DE LARGOS (simple) ===== */
+/* ===== GUÍA DE LARGOS ===== */
 .size-guide {
     max-width: 950px;
     margin: 26px auto;
-    padding: 0 16px
+    padding: 0 16px;
 }
 
 .size-head {
     text-align: center;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .size-title {
     margin: 0 0 6px;
-    font-size: 26px
+    font-size: 26px;
 }
 
 .size-title span {
-    color: var(--gold)
+    color: var(--gold);
 }
 
 .size-sub {
     margin: 0;
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .size-grid {
@@ -172,35 +169,35 @@ body {
     background: #f6f4ef;
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 12px
+    padding: 12px;
 }
 
 .size-card {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 12px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .size-card img {
     width: 100%;
     height: 180px;
-    object-fit: cover
+    object-fit: cover;
 }
 
 .size-card figcaption {
     text-align: center;
     font-weight: 700;
-    padding: 8px
+    padding: 8px;
 }
 
 .size-note {
     text-align: center;
     color: var(--muted);
-    margin-top: 8px
+    margin-top: 8px;
 }
 
-/* ===== SERVICIOS  ===== */
+/* ===== SERVICIOS ===== */
 .services {
     max-width: 1100px;
     margin: 40px auto;
@@ -217,22 +214,23 @@ body {
     border: 1px solid var(--line);
     border-radius: 14px;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .service-card>img {
     width: 100%;
     height: 210px;
     object-fit: cover;
-    border-bottom: 1px solid var(--line)
+    border-bottom: 1px solid var(--line);
 }
 
 .service-card h3 {
-    margin: 12px 14px 6px
+    margin: 12px 14px 6px;
 }
 
 .service-card p {
     margin: 0 14px 10px;
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .chips {
@@ -241,7 +239,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px
+    gap: 8px;
 }
 
 .chips li {
@@ -252,12 +250,12 @@ body {
     border: 1px solid var(--line);
     padding: 8px 10px;
     border-radius: 10px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .chips .ico {
     width: 16px;
-    height: 16px
+    height: 16px;
 }
 
 .btn.btn--small {
@@ -268,29 +266,23 @@ body {
     border-radius: 10px;
     margin: 0 14px 14px;
     display: inline-block;
-    font-weight: 700
+    font-weight: 700;
 }
 
-/* ===== RESPONSIVE SENCILLO ===== */
-
-.srv-hero__media {
-    height: 280px
-}
-
-
+/* ===== RESPONSIVE ===== */
 @media (max-width:1024px) {
     .srv-hero__inner {
         grid-template-columns: 1fr;
-        text-align: center
+        text-align: center;
     }
 
     .srv-actions {
-        justify-content: center
+        justify-content: center;
     }
 
     .srv-hero__media {
         height: auto;
-        padding: 10px 0
+        padding: 10px 0;
     }
 
     .ph {
@@ -299,29 +291,26 @@ body {
         width: min(88%, 340px);
         margin: 8px auto;
         transform: none;
-        border-width: 5px
+        border-width: 5px;
     }
 
     .ph2 {
-        display: none
+        display: none;
     }
-
-   
 }
 
-/* Móviles */
 @media (max-width:520px) {
     .srv-hero {
-        padding: 12px
+        padding: 12px;
     }
 
     .btn-cta,
     .btn-ghost {
         width: 100%;
-        text-align: center
+        text-align: center;
     }
 
     .ph {
-        width: 92%
+        width: 92%;
     }
 }
