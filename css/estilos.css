@@ -1,28 +1,21 @@
-/* =========================== Paleta========================================  */
+/* =========================== Paleta ======================================== */
 :root {
     --bg: #F8F3F0;
-    /* fondo base claro */
     --text: #1E1E1E;
-    /* color de texto principal */
     --accent: #A3B18A;
-    /* color acento (bordes/links) */
     --gold: #D4AF37;
-    /* color de botón, CAMBIAR */
     --white: #FFFFFF;
-    /* blanco  */
 }
 
-/* Reset básico */
+/* =========================== Reset básico ================================== */
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
 body {
     margin: 0;
-    /* quita margenes pord efecto  */
-    padding: 0
-        /* quita padding por defecto */
+    padding: 0;
 }
 
 body {
@@ -32,7 +25,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================== Accesibilidad============================ ===== */
+/* =========================== Accesibilidad ================================= */
 .skip-link {
     position: absolute;
     left: -9999px;
@@ -54,10 +47,11 @@ body {
     z-index: 9999;
 }
 
-/* ==================================== Header=============================== ===== */
+/* =========================== Header ======================================= */
 header {
-    background: var(--bg);
-    border-bottom: 2px solid var(--accent);
+    background: #e8ede3;
+    /* mismo tono exacto que la ola inferior */
+    border-bottom: 1px solid #d7ddcf;
     padding: 15px 40px;
     display: flex;
     align-items: center;
@@ -66,6 +60,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
 }
 
 .logo {
@@ -75,19 +70,24 @@ header {
     min-width: 0;
 }
 
+/* Logo bien visible en cel y en compu */
 .logo img {
-    height: 50px;
+    height: clamp(56px, 8vw, 88px);
     width: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
     display: block;
     flex-shrink: 0;
 }
 
 .logo h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: clamp(1.05rem, 2.2vw, 1.6rem);
     white-space: nowrap;
 }
 
+/* =========================== Navegación =================================== */
 nav {
     flex: 1;
     display: flex;
@@ -100,6 +100,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 22px;
+    align-items: center;
 }
 
 nav a {
@@ -107,25 +108,37 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background .2s, color .2s;
 }
 
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -6px;
-    height: 2px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transition: .25s;
+nav a:hover {
+    background: #eef3e9;
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
+/* Página activa */
+nav a[aria-current="page"] {
+    background: #e8ede3;
+    box-shadow: inset 0 0 0 1px #dbe6d6;
+    color: #36543a;
 }
 
-/* ================================================ Hero / banner================ ===== */
+/* Botón CTA “Agendar” */
+nav li.cta a {
+    background: var(--gold);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 12px;
+    transition: transform .15s;
+}
+
+nav li.cta a:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================== Hero / banner ================================ */
 .banner.banner--solid {
     background: var(--accent);
     color: var(--white);
@@ -149,7 +162,7 @@ nav a:hover::after {
     opacity: .95;
 }
 
-/* Botones */
+/* =========================== Botones ====================================== */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -170,7 +183,7 @@ nav a:hover::after {
     padding: 10px 18px;
 }
 
-/* ===================================== Layout generales============================ ===== */
+/* =========================== Layout generales ============================= */
 .container {
     max-width: 1100px;
     margin: 40px auto;
@@ -183,7 +196,7 @@ nav a:hover::after {
     font-weight: 700;
 }
 
-/* ===================== 3 cajas que sale en inicio (beneficios/atajos) ===== */
+/* =========================== Features (3 cajas) =========================== */
 .features {
     max-width: 1100px;
     margin: 0 auto;
@@ -211,7 +224,7 @@ nav a:hover::after {
     margin: 0 0 8px 0;
 }
 
-/* ========================================== Servicios destacados========================  ===== */
+/* =========================== Servicios destacados ======================== */
 .services-preview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -258,7 +271,7 @@ nav a:hover::after {
     padding: 0 16px 16px;
 }
 
-/* ===================================galería en============================= iniico ===== */
+/* =========================== Galería inicio =============================== */
 .gallery3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -275,7 +288,7 @@ nav a:hover::after {
     box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
 }
 
-/* ======================================= Testimonios================== ===== */
+/* =========================== Testimonios ================================= */
 .testimonials {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,7 +309,7 @@ nav a:hover::after {
     opacity: .8;
 }
 
-/* ===== FAQ mini (accesible) ===== */
+/* =========================== FAQ mini ==================================== */
 .faq {
     display: grid;
     gap: 10px;
@@ -314,7 +327,7 @@ nav a:hover::after {
     font-weight: 700;
 }
 
-/* ===== Banda CTA final ===== */
+/* =========================== CTA final =================================== */
 .cta-band {
     background: #1E1E1E;
     color: #fff;
@@ -331,7 +344,7 @@ nav a:hover::after {
     opacity: .9;
 }
 
-/* ===== About bullets ===== */
+/* =========================== About bullets =============================== */
 .about {
     max-width: 1100px;
     margin: 40px auto;
@@ -356,7 +369,7 @@ nav a:hover::after {
     box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
 }
 
-/* ================================================= Footer ===== ===============================*/
+/* =========================== Footer ====================================== */
 footer {
     background: #1E1E1E;
     color: #FFFFFF;
@@ -374,7 +387,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
+/* =========================== Responsive ================================== */
 @media (max-width: 992px) {
     .features {
         grid-template-columns: 1fr 1fr;
@@ -393,47 +406,29 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .logo img {
-        height: 46px;
-    }
-
-    .logo h1 {
-        font-size: 18px;
-    }
-
-    nav ul {
-        gap: 14px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery3 {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (max-width: 560px) {
     .logo h1 {
         display: none;
     }
 
-    .features {
-        grid-template-columns: 1fr;
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    .services-preview {
-        grid-template-columns: 1fr;
+    nav li.cta a {
+        padding: 10px 16px;
     }
 
+    .features,
+    .services-preview,
     .gallery3 {
         grid-template-columns: 1fr;
     }
 }
 
-/* ===== Navegación con anclas (scroll suave) ===== */
+/* =========================== Navegación anclas =========================== */
 html {
     scroll-behavior: smooth;
 }
@@ -444,22 +439,83 @@ html {
     }
 }
 
-/* Offset para el header sticky al llegar a una sección */
+/* Offset para el header sticky */
 .anchored {
     scroll-margin-top: 90px;
 }
 
-/* ===== Separadores de sección ===== */
+/* =========================== Separadores ================================= */
 .section-pad {
     padding-top: 10px;
     padding-bottom: 4px;
 }
 
-/* modificaacion título */
 .divider {
     border: 0;
     height: 1px;
     margin: 36px auto;
     max-width: 1100px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, .12), transparent);
+}
+/* =================== Mejora de menú móvil =================== */
+/* ===== Menú móvil minimal (ordenado y no invasivo) ===== */
+@media (max-width: 560px) {
+
+    /* header más compacto y con mejor respiro */
+    header {
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    /* logo arriba, menú debajo (siempre centrado) */
+    .logo {
+        order: 1;
+    }
+
+    nav {
+        order: 2;
+        flex: 0 0 100%;
+    }
+
+    /* links en una o dos filas, centrados, sin cajas */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 18px;
+        /* espacio horizontal entre links */
+        row-gap: 6px;
+        /* espacio vertical si se rompe en 2 líneas */
+        padding: 4px 0;
+    }
+
+    /* enlaces muy sobrios: sin pill, sin fondo */
+    nav a {
+        padding: 4px 0;
+        /* solo aire vertical, sin “cápsula” */
+        border-radius: 0;
+        background: transparent !important;
+    }
+
+    /* hover discreto (solo color) */
+    nav a:hover {
+        color: #364936;
+    }
+
+    /* activo: solo un subrayado fino full-width */
+    nav a[aria-current="page"] {
+        color: #2f4b34;
+        box-shadow: none;
+    }
+
+    nav a[aria-current="page"]::after {
+        content: "";
+        display: block;
+        height: 2px;
+        margin-top: 6px;
+        background: var(--accent);
+        /* verde oliva */
+        width: 100%;
+        transform: none;
+        /* sin animación de escala */
+    }
 }

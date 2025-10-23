@@ -467,3 +467,166 @@
     stroke-linejoin: round;
     color: #506044
 }
+/* ===== MÓVIL LIMPIO (botones más angostos y orden) ===== */
+@media (max-width: 560px) {
+
+    /* mismo “gutter” para todo (nada pegado al borde) */
+    .hero-text,
+    .hero-image,
+    .claim {
+        width: 86%;
+        margin-inline: auto;
+    }
+
+    /* Imagen arriba y más pequeña */
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        width: 56%;
+        aspect-ratio: 1/1;
+        margin: 4px auto 0;
+    }
+
+    .circle-bg {
+        width: 184px;
+        height: 184px;
+    }
+
+    /* Título y párrafo más compactos */
+    .hero-text h2 {
+        font-size: 22px;
+        line-height: 1.28;
+        margin: 8px 0 6px;
+    }
+
+    .hero-text p {
+        font-size: .95rem;
+        line-height: 1.55;
+        margin: 0 0 12px;
+    }
+
+    /* BOTONES: dos columnas, pero en un contenedor angosto */
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 botones por fila */
+        gap: 10px;
+        width: 86%;
+        max-width: 320px;
+        /* << clave: más angosto */
+        margin: 8px auto 12px;
+        /* centrados */
+    }
+
+    .btn-main,
+    .btn-outline {
+        width: 100%;
+        padding: 10px 0;
+        /* menos alto */
+        text-align: center;
+    }
+
+    /* Si la pantalla es muy estrecha, apila los botones */
+    @media (max-width: 360px) {
+        .hero-buttons {
+            grid-template-columns: 1fr;
+            max-width: 280px;
+        }
+    }
+
+    /* BADGES: una sola fila horizontal (no ocupa altura) */
+    .hero-badges {
+        width: 86%;
+        margin: 0 auto;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+    }
+
+    .hero-badges::-webkit-scrollbar {
+        display: none;
+    }
+
+    .badge-pill {
+        padding: 6px 8px;
+        font-size: .9rem;
+    }
+
+    .badge-pill .ico {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Claim alineado al contenido, no a toda la pantalla */
+    .claim {
+        font-size: .92rem;
+        text-align: left;
+    }
+
+    /* Pequeños ajustes en el resto para que todo respire igual */
+    .pasos {
+        padding: 0 12px;
+    }
+
+    .pasos-grid article {
+        padding: 14px;
+    }
+
+    .about-compact {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .about-compact__actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 86%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .about-compact__actions .btn-main,
+    .about-compact__actions .btn-outline {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* si es muy angosto, apila esos dos botones también */
+    @media (max-width: 360px) {
+        .about-compact__actions {
+            grid-template-columns: 1fr;
+            max-width: 280px;
+        }
+    }
+}
+/* Centrar badges y claim en móvil (mínimo cambio) */
+@media (max-width: 560px) {
+    .hero-badges {
+        justify-content: center;
+        /* centra */
+        flex-wrap: wrap;
+        /* si no caben, bajan a 2 filas */
+        overflow: visible;
+        /* sin scroll horizontal */
+        white-space: normal;
+        gap: 8px;
+    }
+
+    .claim {
+        text-align: center;
+        /* centra el texto */
+        margin-left: auto;
+        margin-right: auto;
+        /* respeta el mismo gutter */
+        width: 86%;
+    }
+}

@@ -519,3 +519,88 @@
     color: #e0b200;
     letter-spacing: 1px;
 }
+/* === Collage fijo y centrado (MOVIL) === */
+@media (max-width: 560px) {
+
+    /* centra el texto/botones como ya tenías */
+    .hero-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-row {
+        justify-content: center;
+    }
+
+    /* área del collage tamaño fijo para que nada se mueva */
+    .hero-photos {
+        position: relative;
+        width: 320px;
+        /* ancho fijo  */
+        height: 260px;
+        /* alto fijo   */
+        margin: 10px auto 0;
+        /* centrado */
+        overflow: visible;
+    }
+
+    /* todas las tarjetas absolutas, en al centro */
+    .hero-photos .frame {
+        position: absolute !important;
+        width: 170px;
+        /* tamaño  */
+        height: 210px;
+        left: 50%;
+        top: 50%;
+        transform-origin: center;
+        outline-width: 4px;
+        border-radius: 14px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+    }
+
+    /* grande al centro */
+    .f-lg {
+        transform: translate(-50%, -50%) rotate(-2deg);
+        z-index: 2;
+    }
+
+    /* mediana arriba-izquierda */
+    .f-md {
+        transform: translate(calc(-50% - 110px), calc(-50% - 70px)) rotate(6deg);
+        z-index: 1;
+    }
+
+    /* pequeña abajo-derecha */
+    .f-sm {
+        transform: translate(calc(-50% + 95px), calc(-50% + 40px)) rotate(2deg);
+        z-index: 3;
+    }
+
+    /* desactiva efectos en móvil */
+    .frame:hover {
+        transform: none;
+    }
+}
+/* Evitar que las fotos se muevan al tocar */
+@media (max-width: 560px) {
+
+    .hero-photos .frame,
+    .hero-photos .frame img {
+        pointer-events: none;
+        /* no reaccionan al toque */
+        transition: none !important;
+        /* sin animaciones */
+        transform-style: flat !important;
+        /* sin efectos 3D */
+    }
+
+    .hero-photos .frame:hover {
+        transform: none !important;
+        /* bloquea hover */
+    }
+
+    .hero-photos {
+        user-select: none;
+        /* no permite selección accidental */
+    }
+}
