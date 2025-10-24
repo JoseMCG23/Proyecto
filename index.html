@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- hace diseño responsivo, ajusta el ancho -->
     <title>Lil Spirit Nail’s - Inicio</title>
     <meta name="description"
         content="Manicure profesional y nail art personalizado en Alajuela. Diseños modernos, higiene impecable y atención cercana. Agenda tu cita con Lil Spirit Nail’s." />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Conecta antes al servidor de Google Fonts para cargar más rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+    <!-- Importa la fuente Poppins en tres grosores (400, 600, 700) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="css/home.css" />
 </head>
-
 <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
-
-    
-
     <header>
         <div class="logo">
             <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
@@ -37,8 +34,8 @@
 
     <main id="contenido">
         <!-- HERO -->
-        <section class="band band--cream">
-            <div class="hero-beauty reveal">
+        <section class="band band--cream"> <!-- aplica estilos de banda -->
+            <div class="hero-beauty reveal"><!-- contenedor del hero que define el layout y el reveal anima cuando hace scroll -->
                 <div class="hero-text">
                     <h2>Realza tu <span>belleza natural</span> con estilo</h2>
                     <p>Tu momento de calma, color y detalle en un espacio pensado solo para vos.
@@ -46,13 +43,13 @@
 
                     <div class="hero-buttons">
                         <a href="#contacto" class="btn-main">Agendar cita</a>
-                        <a href="https://wa.me/50687975584" class="btn-outline" target="_blank"
-                            rel="noopener">WhatsApp</a>
+                        <a href="https://wa.me/50687975584" class="btn-outline" target="_blank"        
+                            rel="noopener">WhatsApp</a> <!-- seguridad -->
                     </div>
 
                     <!-- Badges con iconos -->
-                    <div class="hero-badges">
-                        <span class="badge-pill"><svg class="ico">
+                    <div class="hero-badges"><!-- esta clase hace que se vean alineados en fila entre si -->
+                        <span class="badge-pill"><svg class="ico"><!-- Badges pill aplica estilo redondeado y lo ico es po del icono vertical -->
                                 <use href="#ic-soap" />
                             </svg>Higiene garantizada</span>
                         <span class="badge-pill"><svg class="ico">
@@ -64,17 +61,17 @@
                     </div>
                 </div>
 
-                <div class="hero-image">
+                <div class="hero-image"> <!-- contenedor de la imagen de inicio -->
                     <div class="circle-bg"></div>
-                    <img src="img/fav1.JPG" alt="Diseño de uñas con arte moderno" loading="eager">
+                    <img src="img/fav1.JPG" alt="Diseño de uñas con arte moderno" loading="eager"><!--carga de imediato por ser portada -->
                 </div>
             </div>
 
             <p class="claim"> Lil Spirit Nail’s — donde cada detalle brilla contigo </p>
-            <div class="divider-icons" aria-hidden="true"></div>
-
-            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,32 C240,96 480,-32 720,32 C960,96 1200,0 1440,32 L1440,80 L0,80 Z" fill="currentColor">
+            <div class="divider-icons" aria-hidden="true"></div><!--mejora accesibilidad -->
+            <!-- acá se hace el efecto de la onda -->
+            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><!-- da estilo,color, posición al fondo). -->
+                <path d="M0,32 C240,96 480,-32 720,32 C960,96 1200,0 1440,32 L1440,80 L0,80 Z" fill="currentColor"> <!-- d son coordenadas y fill usa un color definido -->
                 </path>
             </svg>
         </section>
@@ -121,7 +118,7 @@
                     <p>Cuidado real de la uña natural, diseño a tu medida y una experiencia relajante en Alajuela.</p>
 
                     <ul class="about-compact__bullets" aria-label="Diferenciales">
-                        <li><svg class="ico" style="width:16px;height:16px">
+                        <li><svg class="ico" style="width:16px;height:16px"><!-- Stamaño forzado de 16x16 pixeles -->
                                 <use href="#ic-soap" />
                             </svg> Las mejores técinas </li>
                         <li><svg class="ico" style="width:16px;height:16px">
@@ -154,12 +151,12 @@
         <section class="band band--olive">
             <div class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
                 <h3 id="tit-serv-home" class="section-title section-pad reveal">Servicios destacados</h3>
-
+      <!-- tit efecto al pasar por encima -->
                 <div class="services-preview">
                     <!-- 1 -->
                     <article class="card tilt reveal">
                         <img src="img/clasicass.jpg" alt="Manicure clásico" loading="lazy" decoding="async" width="1200"
-                            height="900">
+                            height="900">         <!--lazy carga imagen solo cuando se muestre --> <!-- async permite que la img se codifique en 2do plano mejor rendimiento -->
                         <div class="card-body">
                             <h4>Manicure clásico</h4>
                             <p>Higiene, corte y esmaltado impecable.</p>
@@ -237,7 +234,7 @@
                     <img src="img/IMG_9559.JPG" alt="Nail art francés moderno" loading="lazy" decoding="async"
                         width="640" height="480">
                 </div>
-                <p style="margin-top:10px;">
+                <p style="margin-top:10px;"><!-- margen supperior a 10 pixeles -->
                     <a href="https://www.instagram.com/lilspiritnails/" target="_blank" rel="noopener"
                         class="btn btn--small">Ver todo en Instagram</a>
                 </p>
@@ -291,7 +288,7 @@
     </footer>
 
     <script>
-        addEventListener("DOMContentLoaded", () => {
+        addEventListener("DOMContentLoaded", () => {//espera a que cargue el contenido
             // Slider antes/después
             document.querySelectorAll(".ba").forEach(b => {
                 let t = b.querySelector(".ba__img--top"), s = b.querySelector(".ba__slider");
