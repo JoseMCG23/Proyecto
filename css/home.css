@@ -1,11 +1,7 @@
 :root {
-    --text: #1e1e1e;
-    --accent: #a3b18a;
-    --gold: #d6a85e;
     --card: #fff;
-    --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        --shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
-
 /* Bandas */
 .band {
     position: relative;
@@ -528,13 +524,7 @@
         text-align: center;
     }
 
-    /* Si la pantalla es muy estrecha, apila los botones */
-    @media (max-width: 360px) {
-        .hero-buttons {
-            grid-template-columns: 1fr;
-            max-width: 280px;
-        }
-    }
+
 
     /* BADGES: una sola fila horizontal (no ocupa altura) */
     .hero-badges {
@@ -600,13 +590,7 @@
         padding: 10px 0;
     }
 
-    /* si es muy angosto, apila esos dos botones también */
-    @media (max-width: 360px) {
-        .about-compact__actions {
-            grid-template-columns: 1fr;
-            max-width: 280px;
-        }
-    }
+
 }
 /* Centrar badges y claim en móvil (mínimo cambio) */
 @media (max-width: 560px) {
@@ -628,5 +612,17 @@
         margin-right: auto;
         /* respeta el mismo gutter */
         width: 86%;
+    }
+}
+/* ===== Ajustes para pantallas muy estrechas (≤360px) ===== */
+@media (max-width: 360px) {
+    .hero-buttons {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+
+    .about-compact__actions {
+        grid-template-columns: 1fr;
+        max-width: 280px;
     }
 }
