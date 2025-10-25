@@ -463,7 +463,7 @@
     stroke-linejoin: round;
     color: #506044
 }
-/* ===== MÓVIL LIMPIO (botones más angostos y orden) ===== */
+/* ===== MÓVIL (botones más angostos y orden) ===== */
 @media (max-width: 560px) {
 
     /* mismo “gutter” para todo (nada pegado al borde) */
@@ -526,7 +526,7 @@
 
 
 
-    /* BADGES: una sola fila horizontal (no ocupa altura) */
+    /* BADGES: una sola fila horizontal  */
     .hero-badges {
         width: 86%;
         margin: 0 auto;
@@ -559,7 +559,7 @@
         text-align: left;
     }
 
-    /* Pequeños ajustes en el resto para que todo respire igual */
+    /* Pequeños ajustes  */
     .pasos {
         padding: 0 12px;
     }
@@ -592,7 +592,7 @@
 
 
 }
-/* Centrar badges y claim en móvil (mínimo cambio) */
+/* Centrar badges y claim en móvil  */
 @media (max-width: 560px) {
     .hero-badges {
         justify-content: center;
