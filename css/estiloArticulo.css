@@ -253,3 +253,76 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/*Informacion*/
+
+.lista { 
+    margin: 18px 0 10px; 
+}
+
+.lista > ol.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.elemento {
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    padding: 14px;
+    margin-bottom: 18px;
+}
+
+.informacion .elemento:last-child{ 
+    margin-bottom: 0; 
+}
+
+.encabezado{
+    display: flex; align-items: center; 
+    gap: 10px; 
+    margin-bottom: 6px;
+}
+
+
+.numero {
+    display: inline-grid; place-items: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #A3B18A; color: #1E1E1E; font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+.subtitulo { 
+    margin: 0; 
+    font-size: 1.05rem;
+}
+
+
+.foto { 
+    margin: 8px 0 8px; 
+}
+.foto img {
+    display: block; width: min(680px, 100%); height: auto;
+    margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    background: #F1F1F1; 
+}
+
+.foto figcaption {
+    text-align: center; 
+    font-size: .92rem; 
+    opacity: .85; 
+    margin-top: 6px;
+}
+
+
+.parrafo { 
+    margin: 10px 0 0; 
+    line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+    .elemento { padding: 16px 18px; }
+}
