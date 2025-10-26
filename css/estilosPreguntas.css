@@ -1,0 +1,55 @@
+/* estilosPreguntas.css
+   Estilos para preguntasFrecuentes.html
+   Mobile-first: una columna en móviles, dos columnas en pantallas >= 900px
+*/
+
+:root{
+  --card-bg: #ffffff;
+  --card-border: rgba(16,24,32,0.04);
+  --card-shadow: 0 6px 18px rgba(27,31,34,0.06);
+  --accent: #A3B18A;
+  --muted: #666;
+}
+
+.preguntas { color: #222; }
+.preguntas .introduccion { color: var(--muted); margin-bottom: 12px; }
+
+/* Grid para las preguntas */
+.grid-preguntas { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+/* Tarjeta de cada pregunta */
+.grid-preguntas .elemento {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+.grid-preguntas .elemento h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.grid-preguntas .elemento h3 { margin: 6px 0; font-size: 0.98rem; color: #333; }
+.grid-preguntas .elemento p { margin: 8px 0; line-height: 1.45; color: #222; }
+.grid-preguntas .elemento ol, .grid-preguntas .elemento ul { margin: 8px 0 0 18px; }
+.grid-preguntas .elemento code { background: #f4f4f4; padding: 2px 6px; border-radius:4px; font-family:monospace; font-size:0.95rem; }
+.grid-preguntas .elemento blockquote { margin:8px 0 0; padding:10px 12px; background:#fafafa; border-left:4px solid #e0e0e0; }
+.grid-preguntas .elemento a { color: var(--accent); text-decoration: none; }
+.grid-preguntas .elemento a:hover, .grid-preguntas .elemento a:focus { text-decoration: underline; }
+
+/* Mejor separación para títulos dentro de tarjetas */
+.grid-preguntas .elemento h2 + h3 { margin-top: 0; }
+
+/* Desktop: dos columnas */
+@media (min-width: 900px) {
+  .grid-preguntas { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .preguntas .contenedor { padding-left: 8px; padding-right: 8px; }
+}
+
+/* Ajustes para pantallas muy grandes (optativo) */
+@media (min-width: 1200px) {
+  .grid-preguntas { grid-template-columns: repeat(2, 1fr); max-width: 1100px; margin: 0 auto; }
+}
+
+/* Pequeños ajustes móviles */
+@media (max-width: 420px) {
+  .grid-preguntas .elemento { padding: 12px; }
+  .grid-preguntas .elemento h2 { font-size: 1rem; }
+}

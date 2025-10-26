@@ -1,0 +1,163 @@
+/* Estilos específicos para la página de contacto */
+.contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f4f0;
+}
+
+.contacto-info {
+    background-color: #fff;
+    text-align: center;
+    padding: 26px 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-info h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.contacto-info p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.contacto-info ul {
+    display: inline-block;
+    text-align: left;
+    margin: 8px auto 0;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.contacto-info ul li {
+    font-size: 16px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 12px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #e8ede3;                   /* hace juego con tu header */
+    border: 1px solid #d7ddcf;
+    color: #2f4b34;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,.06);
+    transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.social a:hover {
+    background: #dfe6d6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+}
+
+.contacto-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 40px;
+}
+
+.contacto-form h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.contacto-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contacto-form button {
+    background-color: var(--gold);
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+    background-color: #b88b44;
+}
+
+@media (max-width: 560px){
+    .contacto-info{ padding: 20px; }
+    .social a{ padding: 8px 12px; }
+}
+
+.horarios__title{
+    margin: 16px 0 10px;
+}
+
+.tabla-wrap{
+    width: min(720px, 100%);
+    margin: 0 auto;
+}
+
+.tabla-horarios{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+.tabla-horarios th, .tabla-horarios td{
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.tabla-horarios th{
+    width: 42%;
+    background: #eef3e9;
+    color: #2f4b34;
+    font-weight: 700;
+}
+
+.tabla-horarios tr:nth-child(even) td{
+    background: #fbfbfb;
+}
+
+@media (max-width: 560px){
+    .tabla-horarios th,
+    .tabla-horarios td{
+        padding: 10px 12px;
+        font-size: .95rem;
+    }
+}

@@ -519,3 +519,9 @@ html {
         /* sin animación de escala */
     }
 }
+
+/* Ensure header and footer use the article site font to match article pages */
+header,
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
