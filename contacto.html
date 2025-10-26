@@ -40,7 +40,7 @@
                 <p><strong>Correo electrónico:</strong> contacto@lilspiritnails.com</p>
 
                 <div class="social">
-                    <p style="width:100%;text-align:center;margin:0 0 4px;"><strong>Síguenos en nuestras redes:</p></strong>
+                    <p style="width:100%;text-align:center;margin:0 0 4px;"><strong>Síguenos en nuestras redes:</strong></p>
 
                     <a href="https://www.facebook.com/LilSpiritNails" target="_blank" rel="noopener" aria-label="Abrir Facebook">
                         Facebook
@@ -70,9 +70,9 @@
                 </div>
             </div>
 
-            <div class="contacto-form">
+                <div class="contacto-form">
                 <h3>Envíanos un mensaje</h3>
-                <form action="#" method="POST">
+                <form id="contactForm" action="#" method="POST">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
@@ -84,6 +84,7 @@
 
                     <button type="submit" class="btn-main">Enviar mensaje</button>
                 </form>
+                <div id="formMessage" role="status" aria-live="polite" style="display:none;margin-top:12px;color:#0a5936;background:#e6f6ef;padding:8px;border-radius:4px;border:1px solid #bfe9d1;">Mensaje enviado</div>
             </div>
         </section>
     </main>
@@ -93,5 +94,21 @@
         <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
     <p>Síguenos en <a href="https://www.instagram.com/LilSpiritNails" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> | <a href="https://wa.me/50687975584" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const msg = document.getElementById('formMessage');
+            if (!form || !msg) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // evitar redirección real
+                // Mostrar mensaje accesible
+                msg.style.display = 'block';
+                // resetear formulario
+                try { form.reset(); } catch (err) {}
+                // ocultar después de 3 segundos
+                setTimeout(function () { msg.style.display = 'none'; }, 3000);
+            });
+        });
+    </script>
 </body>
 </html>
