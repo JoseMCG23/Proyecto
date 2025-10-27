@@ -8,17 +8,17 @@
 }
 
 /* =========================== Reset básico ================================== */
-* {
+* {/* Incluye padding y borde en el cálculo total del tamaño del elemento */
     box-sizing: border-box;
 }
 
-html,
+html,/* Elimina márgenes y relleno predeterminados del navegador */
 body {
     margin: 0;
     padding: 0;
 }
 
-body {
+body {/* Define fondo, color de texto y tipografía base del la pagina */
     background: var(--bg);
     color: var(--text);
     font-family: "Poppins", Arial, sans-serif;
@@ -26,7 +26,7 @@ body {
 }
 
 /* =========================== Accesibilidad ================================= */
-.skip-link {
+.skip-link {/* Oculta el enlace "Saltar al contenido" fuera de la pantalla */
     position: absolute;
     left: -9999px;
     top: auto;
@@ -35,23 +35,23 @@ body {
     overflow: hidden;
 }
 
-.skip-link:focus {
+.skip-link:focus {/* Muestra el enlace  */
     left: 16px;
     top: 16px;
     width: auto;
     height: auto;
     padding: 8px 12px;
-    background: #000;
+    background: #000;/* para alto contraste */
     color: #fff;
     border-radius: 8px;
-    z-index: 9999;
+    z-index: 9999; /* Se asegura de que quede visible sobre todo */
 }
 
 /* =========================== Header ======================================= */
 header {
     background: #e8ede3;
     /* mismo tono exacto que la ola inferior */
-    border-bottom: 1px solid #d7ddcf;
+    border-bottom: 1px solid #d7ddcf; /* Línea divisoria inferior */
     padding: 15px 40px;
     display: flex;
     align-items: center;
@@ -62,48 +62,50 @@ header {
     z-index: 10;
     box-shadow: 0 4px 16px rgba(0, 0, 0, .04);
 }
-
+/* =========================== Logo ======================================= */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    min-width: 0;
+    min-width: 0;/* Evita desbordes en pantallas pequeñas */
 }
 
 /* Logo bien visible en cel y en compu */
 .logo img {
-    height: clamp(56px, 8vw, 88px);
+    height: clamp(56px, 8vw, 88px);/* Tamaño flexible según pantalla */
     width: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+    aspect-ratio: 1/1;/* Mantiene forma cuadrada */
+    object-fit: cover;/* Ajusta sin deformar */
     border-radius: 50%;
-    display: block;
-    flex-shrink: 0;
+    display: block; /* Evita espacios en línea */
+    flex-shrink: 0;/* Evita que se reduzca en pantallas pequeñas */
 }
 
+/* titulo del logo */
 .logo h1 {
     margin: 0;
-    font-size: clamp(1.05rem, 2.2vw, 1.6rem);
-    white-space: nowrap;
+    font-size: clamp(1.05rem, 2.2vw, 1.6rem);/* Escala según ancho */
+    white-space: nowrap; /* Evita salto de línea */
 }
 
 /* =========================== Navegación =================================== */
+/* Contenedor del menú alineado a la derecha */
 nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    flex: 1;/* Ocupa el espacio restante en el header */
+    display: flex;/* Activa el modo flexbox */
+    justify-content: flex-end;/* Alinea los elementos a la derecha */
 }
 
-nav ul {
+nav ul {/* Lista del menú horizontal  */
     margin: 0;
-    padding: 0;
+    padding: 0;/* elimina relleno y margen*/
     list-style: none;
     display: flex;
     gap: 22px;
     align-items: center;
 }
 
-nav a {
+nav a {/* Enlaces del menú principales */
     color: var(--text);
     text-decoration: none;
     font-weight: 600;

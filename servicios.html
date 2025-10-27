@@ -9,9 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/servicios.css">
+    <!-- Nota: 'servicios.css' define estilos de 'srv-hero', 'size-guide' y 'service-card'.
+         'estilos.css' contiene utilidades comunes: 'container', 'btn', 'chips', 'ico'. -->
 </head>
 
 <body>
+    <!-- HEADER compartido: mantener estructura uniforme entre páginas -->
     <header>
         <div class="logo">
             <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
@@ -30,7 +33,7 @@
         </nav>
     </header>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO: 'srv-hero' contiene copy y media. 'srv-actions' incluye CTA principales -->
     <section class="srv-hero">
         <div class="srv-hero__inner">
             <div class="srv-hero__text">
@@ -39,6 +42,7 @@
                 <p class="sub">Opciones, precios y agenda en un solo lugar.</p>
 
                 <div class="srv-actions">
+                    <!-- CTA: el enlace abre WhatsApp prellenado (wa.me?text=...). Clase 'btn-cta' es la acción principal. -->
                     <a class="btn-cta" target="_blank" rel="noopener"
                         href="https://wa.me/50687975584?text=Hola%20Lil%20Spirit%20Nail%E2%80%99s%2C%20quiero%20agendar%20una%20cita">
                         Agendar por WhatsApp
@@ -56,6 +60,7 @@
     </section>
 
     <!-- ===== GUÍA DE LARGOS ===== -->
+    <!-- GUÍA DE LARGOS: 'size-grid' usa figuras con <figcaption> semántico para el tamaño -->
     <section class="size-guide container" id="guia">
         <div class="size-head">
             <h3 class="size-title">Guía de <span>largos</span></h3>
@@ -84,9 +89,9 @@
         <p class="size-note">Disponibles en Gel-X y Gel de Construcción (Luminary). Imágenes referenciales.</p>
     </section>
 
-    <!-- ===== LISTADO DE SERVICIOS ===== -->
+    <!-- LISTADO DE SERVICIOS: cada 'article.service-card' sigue el patrón img + h3 + p + chips + CTA -->
     <section id="listado" class="services container">
-        <!-- 1 -->
+        <!-- Servicio 1 -->
         <article class="service-card">
             <img src="img/construccion.jpg" alt="Gel de construcción / Luminary Multiflex" loading="lazy">
             <h3>Gel de construcción · Luminary Multiflex</h3>
@@ -164,7 +169,10 @@
 
     <footer>
         <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-    <p>Síguenos en <a href="https://www.instagram.com/LilSpiritNails" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> | <a href="https://wa.me/50687975584" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        <p>Síguenos en <a href="https://www.instagram.com/LilSpiritNails" target="_blank"
+                rel="noopener noreferrer">Instagram</a> | <a href="https://facebook.com/" target="_blank"
+                rel="noopener noreferrer">Facebook</a> | <a href="https://wa.me/50687975584" target="_blank"
+                rel="noopener noreferrer">WhatsApp</a></p>
     </footer>
 
     <!-- Iconos -->

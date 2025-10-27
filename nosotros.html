@@ -13,12 +13,15 @@
   <link rel="stylesheet" href="css/estilos.css">
   <!-- Estilos de esta página -->
   <link rel="stylesheet" href="css/nosotros.css">
+  <!-- Nota: 'nosotros.css' contiene reglas específicas para esta página (hero-nos, hero-wrap,
+       creator-card). 'estilos.css' define utilidades comunes: 'container', 'reveal', 'btn', 'chip'. -->
 </head>
 
 <body class="page-nosotros">
+  <!-- Skip link: mejora la navegación por teclado y el flujo para lectores de pantalla -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- HEADER  -->
+  <!-- HEADER: logo + nav (estructura repetida en todo el sitio). 'logo' controla alineado y espaciado -->
   <header>
     <div class="logo">
       <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
@@ -30,7 +33,7 @@
         <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="blog.html">Blog</a></li>
-  <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
         <li><a href="acerca.html">Acerca de</a></li>
         <li><a href="preguntasFrecuentes.html">Preguntas frecuentes</a></li>
       </ul>
@@ -38,7 +41,7 @@
   </header>
 
   <main id="contenido" class="nosotros-main">
-    <!-- HERO -->
+    <!-- HERO: 'hero-nos' = bloque principal. 'color-blobs' es decorativo (aria-hidden) -->
     <section class="hero-nos">
       <div class="color-blobs" aria-hidden="true"></div>
 
@@ -56,11 +59,12 @@
             </div>
 
             <ul class="pill-row" aria-label="Diferenciales">
-              
-              
+
+
             </ul>
           </div>
 
+          <!-- Fotos del hero; 'frame' + 'f-lg/md/sm' controlan tamaño y stack. Mantener alt vacío si son decorativas -->
           <div class="hero-photos" aria-hidden="true">
             <figure class="frame f-lg"><img src="img/IMG_5853.JPG" alt=""></figure>
             <figure class="frame f-md"><img src="img/IMG_0398.JPG" alt=""></figure>
@@ -72,6 +76,8 @@
       <div class="wave-sep" aria-hidden="true">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
           <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" />
+          <!-- Nota corta: 'nosotros.css' define 'hero-nos', 'creator-card', 'nos__grid3';
+       'estilos.css' contiene utilidades como 'container', 'reveal' y componentes (btn, chip). -->
         </svg>
       </div>
     </section>
@@ -93,7 +99,7 @@
           <p class="creator-card__role">Creadora &amp; Manicurista</p>
           <p class="creator-card__bio">Arte + cuidado. Resultados duraderos con foco en bienestar, puntualidad y
             honestidad.</p>
-          
+
         </div>
       </article>
     </section>
@@ -110,6 +116,7 @@
       </article>
       <article class="nos__box">
         <h4>Visión</h4>
+        <!-- CTA row: 'btn-primary' es acción principal (WhatsApp), 'btn-ghost' acción secundaria -->
         <p>Ser referente local por innovación, cercanía y resultados duraderos.</p>
       </article>
       <article class="nos__box">
@@ -128,7 +135,7 @@
       <span class="chip">Experiencia</span>
       <h3>Ambiente <span class="accent">cómodo</span> y detalles</h3>
     </div>
-    
+
     <section class="comfort-grid reveal" aria-label="Ambiente cómodo y detalles">
       <!-- Pet Friendly -->
       <article class="comfort-row">
@@ -144,7 +151,7 @@
 
         </div>
       </article>
-    
+
       <!-- Snacks & Bebidas -->
       <article class="comfort-row">
         <figure class="comfort-media">
@@ -154,10 +161,11 @@
           <h3><svg class="comfort-ic">
               <use href="#ic-cup" />
             </svg>Snacks &amp; Bebidas</h3>
-          <p>Durante tu cita podés disfrutar de una pequeña <strong>barra de snacks y bebidas</strong> pensada para que tu
+          <p>Durante tu cita podés disfrutar de una pequeña <strong>barra de snacks y bebidas</strong> pensada para que
+            tu
             experiencia sea más relajada.
-            </p>
-          
+          </p>
+
         </div>
       </article>
     </section>
@@ -177,78 +185,78 @@
       </figure>
     </section>
 
-  <!-- GALERÍA -->
-  <div class="section-head reveal">
-    <span class="chip">Galería</span>
-    <h3>Trabajos <span class="accent">realizados</span></h3>
-  </div>
-  
-  <section class="container reveal" aria-label="Galería de trabajos">
-    <div class="nos__gallery" role="list">
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_0027.JPG" alt="Diseño de uñas 1" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_0398.JPG" alt="Diseño de uñas 2" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_5627.JPG" alt="Diseño de uñas 3" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_5853.JPG" alt="Diseño de uñas 4" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/fav1.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/clasicass.jpg" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_1009.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_3937.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_5264.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
-      <figure class="nos__item" role="listitem">
-        <img src="img/IMG_2943.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
-      </figure>
+    <!-- GALERÍA -->
+    <div class="section-head reveal">
+      <span class="chip">Galería</span>
+      <h3>Trabajos <span class="accent">realizados</span></h3>
     </div>
-  </section>
 
-<!-- TESTIMONIOS -->
-<div class="section-head reveal">
-  <span class="chip">Opiniones</span>
-  <h3>Testimonios <span class="accent">de ustedes</span></h3>
-</div>
+    <section class="container reveal" aria-label="Galería de trabajos">
+      <div class="nos__gallery" role="list">
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_0027.JPG" alt="Diseño de uñas 1" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_0398.JPG" alt="Diseño de uñas 2" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_5627.JPG" alt="Diseño de uñas 3" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_5853.JPG" alt="Diseño de uñas 4" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/fav1.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/clasicass.jpg" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_1009.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_3937.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_5264.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+        <figure class="nos__item" role="listitem">
+          <img src="img/IMG_2943.JPG" alt="Diseño de uñas 5" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
 
-<section class="t-wrap reveal" aria-label="Testimonios de clientas">
-  <article class="t-card">
-    <p class="t-quote">“Excelente atención y diseños hermosos .”</p>
-    <div class="t-footer">
-      <strong>Fiorela Meléndez.</strong>
-      <span class="t-stars">★★★★★</span>
+    <!-- TESTIMONIOS -->
+    <div class="section-head reveal">
+      <span class="chip">Opiniones</span>
+      <h3>Testimonios <span class="accent">de ustedes</span></h3>
     </div>
-  </article>
 
-  <article class="t-card">
-    <p class="t-quote">“Me encantó el ambiente, súper relajante.”</p>
-    <div class="t-footer">
-      <strong>Elieth Jiménez.</strong>
-      <span class="t-stars">★★★★★</span>
-    </div>
-  </article>
+    <section class="t-wrap reveal" aria-label="Testimonios de clientas">
+      <article class="t-card">
+        <p class="t-quote">“Excelente atención y diseños hermosos .”</p>
+        <div class="t-footer">
+          <strong>Fiorela Meléndez.</strong>
+          <span class="t-stars">★★★★★</span>
+        </div>
+      </article>
 
-  <article class="t-card">
-    <p class="t-quote">“Duraron semanas intactas, ¡feliz con el resultado!”</p>
-    <div class="t-footer">
-      <strong>Valery Chavarría</strong>
-      <span class="t-stars">★★★★★</span>
-    </div>
-  </article>
-</section>
+      <article class="t-card">
+        <p class="t-quote">“Me encantó el ambiente, súper relajante.”</p>
+        <div class="t-footer">
+          <strong>Elieth Jiménez.</strong>
+          <span class="t-stars">★★★★★</span>
+        </div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">“Duraron semanas intactas, ¡feliz con el resultado!”</p>
+        <div class="t-footer">
+          <strong>Valery Chavarría</strong>
+          <span class="t-stars">★★★★★</span>
+        </div>
+      </article>
+    </section>
 
 
   </main>
@@ -256,7 +264,10 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <p>&copy; 2025 Lil Spirit Nail’s · Alajuela, Costa Rica</p>
-  <p>Síguenos: <a href="https://www.instagram.com/LilSpiritNails" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://wa.me/50687975584" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      <p>Síguenos: <a href="https://www.instagram.com/LilSpiritNails" target="_blank"
+          rel="noopener noreferrer">Instagram</a> · <a href="https://facebook.com/" target="_blank"
+          rel="noopener noreferrer">Facebook</a> · <a href="https://wa.me/50687975584" target="_blank"
+          rel="noopener noreferrer">WhatsApp</a></p>
     </div>
   </footer>
 
@@ -316,5 +327,5 @@
     </symbol>
   </svg>
 </body>
-</html>
 
+</html>

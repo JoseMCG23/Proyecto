@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- hace diseño responsivo, ajusta el ancho -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- hace diseño responsivo, ajusta el ancho -->
     <title>Lil Spirit Nail’s - Inicio</title>
-    <meta name="description"
-        content="Manicure profesional y nail art personalizado en Alajuela.." />
+    <meta name="description" content="Manicure profesional y nail art personalizado en Alajuela.." />
     <!-- Conecta antes al servidor de Google Fonts para cargar más rápido -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Importa la fuente Poppins en tres grosores (400, 600, 700) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- CSS global: contiene utilidades (container, reveal, btn, chips, ico, tilt) -->
     <link rel="stylesheet" href="css/estilos.css" />
+    <!-- CSS específico de la home: hero-beauty, band--cream/olive, about-compact -->
     <link rel="stylesheet" href="css/home.css" />
 </head>
+
 <body>
+    <!-- Accesibilidad: enlace para saltar la navegación al contenido principal -->
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
+    <!-- HEADER: logo + navegación principal -->
     <header>
         <div class="logo">
+            <!-- Logo: imagen (alt descriptivo) y título visible; la clase 'logo' controla layout -->
             <img src="img/logo.jpg" alt="Logo Lil Spirit Nail’s">
             <h1>Lil Spirit Nail’s</h1>
         </div>
+        <!-- NAV: lista simple; 'aria-current' marca la página activa para lectores de pantalla -->
         <nav aria-label="Principal">
             <ul>
                 <li><a href="index.html" aria-current="page">Inicio</a></li>
@@ -33,28 +41,34 @@
         </nav>
     </header>
 
+    <!-- MAIN: contenedor principal (id usado por skip-link) -->
     <main id="contenido">
         <!--============================================================================================================ HERO -->
         <!-- “Bandas” = franjas de color para separar secciones y que sea fácil de leer por bloques. -->
+        <!-- SECCIÓN: HERO (band + variante 'band--cream') -->
         <section class="band band--cream"> <!-- aplica estilos de banda -->
-            <div class="hero-beauty reveal"><!-- contenedor del hero que define el layout y el reveal anima cuando hace scroll -->
+            <div class="hero-beauty reveal">
+                <!-- contenedor del hero que define el layout y el reveal anima cuando hace scroll -->
                 <div class="hero-text">
                     <h2>Realza tu <span>belleza natural</span> con estilo</h2>
                     <p>Tu momento de calma, color y detalle en un espacio pensado solo para vos.
-                        </p>
+                    </p>
 
+                    <!-- BOTONES: 'btn-main' = primaria, 'btn-outline' = secundaria -->
                     <div class="hero-buttons">
                         <a href="contacto.html" class="btn-main">Agendar cita</a>
-                        <a href="https://wa.me/50687975584" class="btn-outline" target="_blank"        
+                        <a href="https://wa.me/50687975584" class="btn-outline" target="_blank"
                             rel="noopener">WhatsApp</a><!-- Abre WhatsApp en nueva pestaña y con “noopener” por seguridad. -->
                     </div>
 
                     <!-- Badges con iconos -->
                     <div class="hero-badges"><!-- esta clase hace que se vean alineados en fila entre si -->
-                        <span class="badge-pill"><svg class="ico"><!-- Badges pill aplica estilo redondeado y aplica iconos -->
+                        <span class="badge-pill"><svg
+                                class="ico"><!-- Badges pill aplica estilo redondeado y aplica iconos -->
                                 <use href="#ic-soap" />
                             </svg>Higiene garantizada</span>
-                        <span class="badge-pill"><svg class="ico"><!-- cada icono tiene la clase ico para mantener mismo tamaño y color -->
+                        <span class="badge-pill"><svg
+                                class="ico"><!-- cada icono tiene la clase ico para mantener mismo tamaño y color -->
                                 <use href="#ic-paw" />
                             </svg>Pet Friendly</span>
                         <span class="badge-pill"><svg class="ico">
@@ -63,22 +77,27 @@
                     </div>
                 </div>
 
+                <!-- Imagen principal: 'hero-image' y 'circle-bg' son estilizados en home.css; hero usa loading="eager" para LCP -->
                 <div class="hero-image"> <!-- contenedor de la imagen de inicio -->
                     <div class="circle-bg"></div> <!-- Círculo decorativo que centra la atención en la foto. -->
-                    <img src="img/fav1.JPG" alt="Diseño de uñas con arte moderno" loading="eager"><!--carga de imediato por ser portada -->
+                    <img src="img/fav1.JPG" alt="Diseño de uñas con arte moderno"
+                        loading="eager"><!--carga de imediato por ser portada -->
                 </div>
             </div>
 
             <p class="claim"> Lil Spirit Nail’s — donde cada detalle brilla contigo </p>
             <div class="divider-icons" aria-hidden="true"></div><!--mejora accesibilidad -->
             <!-- acá se hace el efecto de la onda -->
-            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><!-- da estilo,color, posición(lo que permite que se estire a lo ancho) al fondo). -->
-                <path d="M0,32 C240,96 480,-32 720,32 C960,96 1200,0 1440,32 L1440,80 L0,80 Z" fill="currentColor"> <!-- d son coordenadas y fill usa un color definido -->
+            <svg class="wave wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none"
+                aria-hidden="true"><!-- da estilo,color, posición(lo que permite que se estire a lo ancho) al fondo). -->
+                <path d="M0,32 C240,96 480,-32 720,32 C960,96 1200,0 1440,32 L1440,80 L0,80 Z" fill="currentColor">
+                    <!-- d son coordenadas y fill usa un color definido -->
                 </path>
             </svg>
         </section>
 
         <!-- 3 PASOS -->
+        <!-- SECCIÓN: Pasos (band--olive) - usa 'container' para ancho y 'reveal' para animar -->
         <section class="band band--olive">
             <div class="container pasos reveal">
                 <h3>Tu cita perfecta en 3 pasos</h3>
@@ -113,7 +132,7 @@
         </section>
 
         <!-- SOBRE + CTA COMPACTOS -->
-        <section class="band band--cream">  
+        <section class="band band--cream">
             <div class="about-compact container reveal"> <!-- Contenedor principal de dos columnas: texto a la izquierda y KPIs a la derecha.
                          "reveal" activa la animación suave al hacer scroll. -->
                 <div class="about-compact__text">
@@ -142,7 +161,8 @@
                     </div>
                 </div>
 
-                <ul class="about-compact__kpis"><!-- Columna derecha: muestra datos breves o métricas que generan confianza (KPI = indicador clave). -->
+                <ul class="about-compact__kpis">
+                    <!-- Columna derecha: muestra datos breves o métricas que generan confianza (KPI = indicador clave). -->
                     <li><strong>+4</strong><span>Años de experiencia</span></li>
                     <li><strong>+500</strong><span>Clientes felices</span></li>
                     <li><strong>100%</strong><span>Pet Friendly</span></li>
@@ -151,16 +171,20 @@
         </section>
 
         <!-- Servicios destacados -->
+        <!-- SECCIÓN: Servicios destacados (ancla #servicios) -->
         <section class="band band--olive">
-            <div class="container anchored" id="servicios" aria-labelledby="tit-serv-home"><!-- Contenedor centrado con id "servicios" para enlaces internos y aria-labelledby para accesibilidad -->
-                    
+            <div class="container anchored" id="servicios" aria-labelledby="tit-serv-home">
+                <!-- Contenedor centrado con id "servicios" para enlaces internos y aria-labelledby para accesibilidad -->
+
                 <h3 id="tit-serv-home" class="section-title section-pad reveal">Servicios destacados</h3>
-      <!-- tit efecto al pasar por encima -->
+                <!-- tit efecto al pasar por encima -->
                 <div class="services-preview">
                     <!-- 1 -->
+                    <!-- CARD: 'card' estructura + 'tilt' decorativo + 'reveal' animable -->
                     <article class="card tilt reveal">
                         <img src="img/clasicass.jpg" alt="Manicure clásico" loading="lazy" decoding="async" width="1200"
-                            height="900">         <!--lazy carga imagen solo cuando se muestre --> <!-- async permite que la img se codifique en 2do plano mejor rendimiento -->
+                            height="900"> <!--lazy carga imagen solo cuando se muestre -->
+                        <!-- async permite que la img se codifique en 2do plano mejor rendimiento -->
                         <div class="card-body">
                             <h4>Manicure clásico</h4>
                             <p>Higiene, corte y esmaltado impecable.</p>
@@ -168,7 +192,7 @@
                                 <li><svg class="ico">
                                         <use href="#ic-clock" />
                                     </svg>45–60 min</li>
-                                
+
                             </ul>
                         </div>
                         <div class="card-actions"><a href="servicios.html" class="btn btn--small">Ver más</a></div>
@@ -201,7 +225,7 @@
                                 <li><svg class="ico">
                                         <use href="#ic-clock" />
                                     </svg>75–90 min</li>
-                                
+
                             </ul>
                         </div>
                         <div class="card-actions"><a href="servicios.html" class="btn btn--small">Ver más</a></div>
@@ -216,12 +240,14 @@
 
         <!-- Antes/Después --> <!--usa un pequeño script en JavaScript
              que hace mover el recorte de la imagen al deslizar. -->
+        <!-- SECCIÓN: Antes/Después - usa .ba con dos imágenes y un range para controlar clip-path -->
         <section class="band band--nude">
             <div class="before-after container reveal" aria-label="Antes y después">
                 <h3 class="section-title section-pad">Antes y después</h3>
                 <div class="ba">
                     <img src="img/IMG_1033.JPG" alt="Antes" class="ba__img">
                     <img src="img/IMG_9116.JPG" alt="Después" class="ba__img ba__img--top">
+                    <!-- Slider: controla 'clip-path' de la imagen .ba__img--top (ver script al final) -->
                     <input type="range" min="0" max="100" value="50" class="ba__slider" aria-label="Comparar resultado">
                 </div>
             </div>
@@ -256,7 +282,8 @@
 
                 <div class="why-grid"> <!-- Contenedor tipo grid que organiza las tarjetas en filas y columnas -->
                     <article class="why-card tilt"><!-- Cada article es una tarjeta individual de beneficio -->
-                        <div class="ico-circle"><svg class="ico"> <!-- Ícono circular decorativo que representa el beneficio -->
+                        <div class="ico-circle"><svg class="ico">
+                                <!-- Ícono circular decorativo que representa el beneficio -->
                                 <use href="#ic-bottle" />
                             </svg></div>
                         <h4>Higiene real</h4>
@@ -287,119 +314,123 @@
             </div>
         </section>
 
-    <footer>
-        <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
-    <p>Síguenos en <a href="https://www.instagram.com/LilSpiritNails" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> | <a href="https://wa.me/50687975584" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Lil Spirit Nail’s | Alajuela, Costa Rica</p>
+            <p>Síguenos en <a href="https://www.instagram.com/LilSpiritNails" target="_blank"
+                    rel="noopener noreferrer">Instagram</a> | <a href="https://facebook.com/" target="_blank"
+                    rel="noopener noreferrer">Facebook</a> | <a href="https://wa.me/50687975584" target="_blank"
+                    rel="noopener noreferrer">WhatsApp</a></p>
+        </footer>
 
-    <script>
-        addEventListener("DOMContentLoaded", () => {//espera a que cargue el contenido
-           
-            // ---------------- SLIDER ANTES / DESPUÉS ----------------
-            document.querySelectorAll(".ba").forEach(b => {
-                // Selecciona cada bloque con clase .ba (el comparador)
-                let t = b.querySelector(".ba__img--top"),  // Imagen superior (la del “después”)
-                    s = b.querySelector(".ba__slider");    // Deslizador (input tipo range)
+        <script>
+            addEventListener("DOMContentLoaded", () => {//espera a que cargue el contenido
 
-                // Si existe el deslizador, escucha el movimiento (evento "input")
-                s && s.addEventListener("input", e => {
-                    // Ajusta el recorte (clipPath) de la imagen superior según el valor del deslizador
-                    // inset(0 X% 0 0) recorta desde la derecha, mostrando más o menos la imagen de arriba
-                    t.style.clipPath = `inset(0 ${100 - e.target.value}% 0 0)`;
+                // ---------------- SLIDER ANTES / DESPUÉS ----------------
+                document.querySelectorAll(".ba").forEach(b => {
+                    // Selecciona cada bloque con clase .ba (el comparador)
+                    let t = b.querySelector(".ba__img--top"),  // Imagen superior (la del “después”)
+                        s = b.querySelector(".ba__slider");    // Deslizador (input tipo range)
+
+                    // Si existe el deslizador, escucha el movimiento (evento "input")
+                    s && s.addEventListener("input", e => {
+                        // Ajusta el recorte (clipPath) de la imagen superior según el valor del deslizador
+                        // inset(0 X% 0 0) recorta desde la derecha, mostrando más o menos la imagen de arriba
+                        t.style.clipPath = `inset(0 ${100 - e.target.value}% 0 0)`;
+                    });
                 });
+
+
+                // ---------------- ANIMACIÓN REVEAL AL HACER SCROLL ----------------
+                // Crea un observador que detecta cuándo los elementos entran en pantalla
+                let io = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        // Si el elemento está visible (intersectando con el viewport)
+                        if (e.isIntersecting) {
+                            // Agrega la clase .reveal--visible para activar la animación en CSS
+                            e.target.classList.add("reveal--visible");
+                        }
+                    });
+                }, { threshold: .2 }); // threshold .2 = 20% visible para activar la animación
+
+                // Aplica el observador a todos los elementos con la clase .reveal
+                document.querySelectorAll(".reveal").forEach(r => io.observe(r));
+
+                // ---------------- BARRA DE PROGRESO (opcional) ----------------
+                let b = document.querySelector(".scrollbar__bar"); // Busca la barra de progreso si existe
+
+                // Si la barra existe, actualiza su escala al hacer scroll
+                b && addEventListener("scroll", () => {
+                    let d = document.documentElement; // Documento completo (para medir el scroll total)
+                    // Calcula cuánto ha avanzado el scroll y lo convierte en una escala horizontal (0 a 1)
+                    b.style.transform = `scaleX(${d.scrollTop / (d.scrollHeight - d.clientHeight)})`;
+                }, { passive: 1 }); // passive: mejora el rendimiento del scroll
+
             });
-
-
-           // ---------------- ANIMACIÓN REVEAL AL HACER SCROLL ----------------
-            // Crea un observador que detecta cuándo los elementos entran en pantalla
-            let io = new IntersectionObserver(entries => {
-                entries.forEach(e => {
-                    // Si el elemento está visible (intersectando con el viewport)
-                    if (e.isIntersecting) {
-                        // Agrega la clase .reveal--visible para activar la animación en CSS
-                        e.target.classList.add("reveal--visible");
-                    }
-                });
-            }, { threshold: .2 }); // threshold .2 = 20% visible para activar la animación
-
-            // Aplica el observador a todos los elementos con la clase .reveal
-            document.querySelectorAll(".reveal").forEach(r => io.observe(r));
-
-            // ---------------- BARRA DE PROGRESO (opcional) ----------------
-            let b = document.querySelector(".scrollbar__bar"); // Busca la barra de progreso si existe
-
-            // Si la barra existe, actualiza su escala al hacer scroll
-            b && addEventListener("scroll", () => {
-                let d = document.documentElement; // Documento completo (para medir el scroll total)
-                // Calcula cuánto ha avanzado el scroll y lo convierte en una escala horizontal (0 a 1)
-                b.style.transform = `scaleX(${d.scrollTop / (d.scrollHeight - d.clientHeight)})`;
-            }, { passive: 1 }); // passive: mejora el rendimiento del scroll
-
-        });
-    </script>
-<!-- Sprite SVG: almacena todos los íconos del sitio en un solo bloque oculto -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-    <!-- Cada <symbol> define un ícono con un id único -->
-    <symbol id="ic-soap" viewBox="0 0 24 24">
-        <!-- Dibuja el ícono de jabón -->
-        <rect x="3" y="9" width="18" height="10" rx="4" />
-        <path d="M7 9V7a3 3 0 0 1 3-3h2" />
-        <circle cx="7" cy="5" r="1" />
-        <circle cx="16" cy="4" r="1" />
-    </symbol>
-    <symbol id="ic-paw" viewBox="0 0 24 24">
-        <!-- Ícono de huellita (Pet Friendly) -->
-        <path d="M12 13c3 0 5 2 5 4.5S14.5 21 12 21s-5-.5-5-3.5S9 13 12 13Z" />
-        <circle cx="6.5" cy="9" r="1.8" />
-        <circle cx="10.5" cy="7" r="1.8" />
-        <circle cx="13.5" cy="7" r="1.8" />
-        <circle cx="17.5" cy="9" r="1.8" />
-    </symbol>
-    <symbol id="ic-cup" viewBox="0 0 24 24">
-        <path d="M6 3h10v5a5 5 0 0 1-5 5 5 5 0 0 1-5-5V3Z" />
-        <path d="M21 7h-3v1a6 6 0 0 1-6 6h-1" />
-        <path d="M5 21h10" />
-    </symbol>
-    <symbol id="ic-nail" viewBox="0 0 24 24">
-        <path d="M8 3h8l1 6v6a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V9l1-6Z" />
-        <path d="M9 9h6" />
-    </symbol>
-    <symbol id="ic-calendar" viewBox="0 0 24 24">
-        <rect x="3" y="4" width="18" height="18" rx="2" />
-        <path d="M16 2v4M8 2v4M3 10h18" />
-    </symbol>
-    <symbol id="ic-sparkles" viewBox="0 0 24 24">
-        <path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z" />
-        <path d="M20 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z" />
-    </symbol>
-    <symbol id="ic-bottle" viewBox="0 0 24 24">
-        <path d="M10 2h4v3l2 2v11a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V7l2-2V2Z" />
-    </symbol>
-    <symbol id="ic-palette" viewBox="0 0 24 24">
-        <path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 1 0 0-4h-1a2 2 0 1 1 0-4 3 3 0 0 0 3-3 7 7 0 0 0-4-7Z" />
-        <circle cx="7.5" cy="10.5" r="1" />
-        <circle cx="9.5" cy="6.5" r="1" />
-        <circle cx="14.5" cy="6.5" r="1" />
-    </symbol>
-    <symbol id="ic-clock" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v6l4 2" />
-    </symbol>
-    <symbol id="ic-pin" viewBox="0 0 24 24">
-        <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z" />
-        <circle cx="12" cy="10" r="2.5" />
-    </symbol>
-    <symbol id="ic-wallet" viewBox="0 0 24 24">
-        <rect x="3" y="6" width="18" height="14" rx="3" />
-        <path d="M18 10h-5a2 2 0 0 0 0 4h5v-4Z" />
-    </symbol>
-    <symbol id="ic-crown" viewBox="0 0 24 24">
-        <path d="M3 8l4 3 5-6 5 6 4-3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8Z" />
-    </symbol>
-    <symbol id="ic-camera" viewBox="0 0 24 24">
-        <path d="M4 7h4l2-2h4l2 2h4v12H4V7Z" />
-        <circle cx="12" cy="13" r="3.5" />
-    </symbol>
-</svg>
+        </script>
+        <!-- Sprite SVG: almacena todos los íconos del sitio en un solo bloque oculto -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <!-- Cada <symbol> define un ícono con un id único -->
+            <symbol id="ic-soap" viewBox="0 0 24 24">
+                <!-- Dibuja el ícono de jabón -->
+                <rect x="3" y="9" width="18" height="10" rx="4" />
+                <path d="M7 9V7a3 3 0 0 1 3-3h2" />
+                <circle cx="7" cy="5" r="1" />
+                <circle cx="16" cy="4" r="1" />
+            </symbol>
+            <symbol id="ic-paw" viewBox="0 0 24 24">
+                <!-- Ícono de huellita (Pet Friendly) -->
+                <path d="M12 13c3 0 5 2 5 4.5S14.5 21 12 21s-5-.5-5-3.5S9 13 12 13Z" />
+                <circle cx="6.5" cy="9" r="1.8" />
+                <circle cx="10.5" cy="7" r="1.8" />
+                <circle cx="13.5" cy="7" r="1.8" />
+                <circle cx="17.5" cy="9" r="1.8" />
+            </symbol>
+            <symbol id="ic-cup" viewBox="0 0 24 24">
+                <path d="M6 3h10v5a5 5 0 0 1-5 5 5 5 0 0 1-5-5V3Z" />
+                <path d="M21 7h-3v1a6 6 0 0 1-6 6h-1" />
+                <path d="M5 21h10" />
+            </symbol>
+            <symbol id="ic-nail" viewBox="0 0 24 24">
+                <path d="M8 3h8l1 6v6a4 4 0 0 1-4 4h-2a4 4 0 0 1-4-4V9l1-6Z" />
+                <path d="M9 9h6" />
+            </symbol>
+            <symbol id="ic-calendar" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+            </symbol>
+            <symbol id="ic-sparkles" viewBox="0 0 24 24">
+                <path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z" />
+                <path d="M20 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z" />
+            </symbol>
+            <symbol id="ic-bottle" viewBox="0 0 24 24">
+                <path d="M10 2h4v3l2 2v11a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V7l2-2V2Z" />
+            </symbol>
+            <symbol id="ic-palette" viewBox="0 0 24 24">
+                <path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 1 0 0-4h-1a2 2 0 1 1 0-4 3 3 0 0 0 3-3 7 7 0 0 0-4-7Z" />
+                <circle cx="7.5" cy="10.5" r="1" />
+                <circle cx="9.5" cy="6.5" r="1" />
+                <circle cx="14.5" cy="6.5" r="1" />
+            </symbol>
+            <symbol id="ic-clock" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v6l4 2" />
+            </symbol>
+            <symbol id="ic-pin" viewBox="0 0 24 24">
+                <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z" />
+                <circle cx="12" cy="10" r="2.5" />
+            </symbol>
+            <symbol id="ic-wallet" viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="14" rx="3" />
+                <path d="M18 10h-5a2 2 0 0 0 0 4h5v-4Z" />
+            </symbol>
+            <symbol id="ic-crown" viewBox="0 0 24 24">
+                <path d="M3 8l4 3 5-6 5 6 4-3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8Z" />
+            </symbol>
+            <symbol id="ic-camera" viewBox="0 0 24 24">
+                <path d="M4 7h4l2-2h4l2 2h4v12H4V7Z" />
+                <circle cx="12" cy="13" r="3.5" />
+            </symbol>
+        </svg>
 </body>
+
 </html>
