@@ -116,11 +116,11 @@
     .social a{ padding: 8px 12px; }
 }
 
-.horarios__title{
+.horarios-Titulo{ /*ajuste del margen*/
     margin: 16px 0 10px;
 }
 
-.tabla-wrap{
+.tabla-wrap{ /*ajuste de la anchura de la tabla*/
     width: min(720px, 100%);
     margin: 0 auto;
 }

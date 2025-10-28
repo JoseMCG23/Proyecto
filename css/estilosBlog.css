@@ -100,9 +100,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 36px;
-    position: sticky;
-    top: var(--sidebar-sticky-offset);
-    align-self: flex-start; /*Los cuadros siguen al usuario al bajar en la pagina*/
+    position: sticky; /*Los cuadros siguen al usuario al bajar en la pagina*/
+    top: var(--sidebar-sticky-offset); 
     margin-top: 10px;
 }
 
